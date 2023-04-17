@@ -1,3 +1,3 @@
-import engine
+import game
 
-engine.loop()
+game.core.loop()
