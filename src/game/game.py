@@ -33,6 +33,22 @@ def decrease_level(amount: int = 1):
     __level = max(1, __level - amount)
     update_gui()
 
+def restart_game():
+    global __targets
+    global __level
+    global __lives
+    global __total_targets_spawned
+    global __current_cooldown
+    global __score
+    
+    __targets = []
+    __level = 1
+    __lives = 3
+    __total_targets_spawned= 0
+    __current_cooldown = 0
+    __score = 0
+    update_gui()
+
 def update(delta_time_seconds: float):
     global __targets
     global __current_cooldown
@@ -48,6 +64,8 @@ def update(delta_time_seconds: float):
         if target.position.y - target.radius > const.__WINDOW_SIZE[1]:
             __targets.remove(target)
             __lives -= 1
+            if __lives <= 0:
+                restart_game()
             update_gui()
         
         target.position += target.speed * delta_time_seconds * get_speed_multiplier()
@@ -92,7 +110,7 @@ __targets_per_level: int = 10
 __score: int = 0
 
 __spawn_cooldown: float = 1
-__current_cooldown: float = __spawn_cooldown
+__current_cooldown: float = 0
 
 
 font = pygame.font.Font(None, 25)
