@@ -15,10 +15,13 @@ class Target:
 
 
 def get_speed_multiplier() -> float:
-    return 1.1 * 1.2 ** __level
+    return 1 + 1.07 ** __level - 1.035 ** __level + 1
 
 def get_amount_multiplier() -> int:
     return int(20 + 5 * __level)
+
+def get_cooldown_multiplier() -> int:
+    return max(.05, 1 / 1.07 ** __level)
 
 def increase_level(amount: int = 1):
     global __level
@@ -32,10 +35,19 @@ def decrease_level(amount: int = 1):
 
 def update(delta_time_seconds: float):
     global __targets
+    global __current_cooldown
+    global __lives
+    
+    __current_cooldown -= delta_time_seconds / const.__TARGET_FPS
+    
+    if __current_cooldown <= 0:
+        spawn_target()
+        __current_cooldown = __spawn_cooldown * get_cooldown_multiplier()
     
     for target in __targets:
-        if target.position.y > const.__WINDOW_SIZE[1]:
+        if target.position.y - target.radius > const.__WINDOW_SIZE[1]:
             __targets.remove(target)
+            __lives -= 1
             update_gui()
         
         target.position += target.speed * delta_time_seconds * get_speed_multiplier()
@@ -49,9 +61,15 @@ def render(surface: pygame.Surface):
 
 def spawn_target():
     global __targets
+    global __total_targets_spawned
     
     position = (random.randint(__radius, const.__WINDOW_SIZE[0] - __radius), __radius)
     __targets.append(Target(__radius, pygame.Vector2(position)))
+    __total_targets_spawned += 1
+    
+    if __total_targets_spawned % __targets_per_level == 0:
+        increase_level()
+
 def update_gui():
     global __level_text
     global __lives_text
@@ -64,6 +82,12 @@ __targets: list[Target] = []
 __level: int = 1
 __lives: int = 3
 __radius: int = 15
+__total_targets_spawned: int = 0
+__targets_per_level: int = 10
+
+__spawn_cooldown: float = 1
+__current_cooldown: float = __spawn_cooldown
+
 
 font = pygame.font.Font(None, 25)
 
