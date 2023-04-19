@@ -56,8 +56,11 @@ def render(surface: pygame.Surface):
     for target in __targets:
         pygame.draw.circle(surface, target.color, target.position, target.radius)
     
-    surface.blit(__level_text, (5, 5))
-    surface.blit(__lives_text, (5, 10 + __level_text.get_height()))
+    texts = [__level_text, __lives_text, __score_text]
+    height = 5
+    for text in texts:
+        surface.blit(text, (5, height))
+        height += 5 + text.get_height()
 
 def spawn_target():
     global __targets
@@ -73,9 +76,11 @@ def spawn_target():
 def update_gui():
     global __level_text
     global __lives_text
+    global __score_text
     
     __level_text = font.render(f"Nível: {__level}", True, "#eeeeee")
     __lives_text = font.render(f"Vidas: {__lives}", True, "#eeeeee")
+    __score_text = font.render(f"Pontos: {__score}", True, "#eeeeee")
 
 __targets: list[Target] = []
 
@@ -84,6 +89,7 @@ __lives: int = 3
 __radius: int = 15
 __total_targets_spawned: int = 0
 __targets_per_level: int = 10
+__score: int = 0
 
 __spawn_cooldown: float = 1
 __current_cooldown: float = __spawn_cooldown
@@ -93,4 +99,5 @@ font = pygame.font.Font(None, 25)
 
 __level_text: pygame.Surface = font.render("Nível: x", True, "#eeeeee")
 __lives_text: pygame.Surface = font.render("Vidas: x", True, "#eeeeee")
+__score_text: pygame.Surface = font.render("Pontos: x", True, "#eeeeee")
 update_gui()
