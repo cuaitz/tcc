@@ -12,7 +12,6 @@ pygame.display.set_caption(f"FPS: {round(__clock.get_fps(), 2)}")
 def update(delta_time_seconds: float):
     pygame.display.set_caption(f"FPS: {round(__clock.get_fps(), 2)}")
     game.update(delta_time_seconds)
-    
 
 def render(surface: pygame.Surface):
     surface.fill("#232323")
@@ -28,12 +27,8 @@ def loop():
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_ESCAPE:
                     return
-                elif event.key == pygame.K_w:
-                    game.spawn_target()
-                elif event.key == pygame.K_a:
-                    game.decrease_level()
-                elif event.key == pygame.K_d:
-                    game.increase_level()
+            
+            game.process_event(event)
 
         update(delta_time_seconds)
         render(__display)

@@ -1,3 +1,4 @@
+import math
 import random
 
 import pygame
@@ -49,6 +50,34 @@ def restart_game():
     __score = 0
     update_gui()
 
+def process_event(event: pygame.event.Event):
+    global __score
+    global __targets
+    
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.button == 1:
+            for target in __targets:
+                click_position = event.pos
+                target_center = target.position
+                target_radius = target.radius
+                
+                distance = math.dist(click_position, target_center)
+                
+                if distance <= target_radius:
+                    __targets.remove(target)
+                    __score += 1 * __level
+                    update_gui()
+                    
+                
+
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_w:
+            spawn_target()
+        elif event.key == pygame.K_a:
+            decrease_level()
+        elif event.key == pygame.K_d:
+            increase_level()
+    
 def update(delta_time_seconds: float):
     global __targets
     global __current_cooldown
