@@ -14,41 +14,40 @@ def loop():
                 if event.key == pygame.K_ESCAPE:
                     return
             
-            __current_state.process_event(event)
+            get_current_state().process_event(event)
 
         pygame.display.set_caption(f"FPS: {round(__clock.get_fps(), 2)}")
-        __current_state.update(delta_time_seconds)
-        __current_state.render(__display)
+        get_current_state().update(delta_time_seconds)
+        get_current_state().render(__display)
         pygame.display.update()
 
-def push_state(state_object: states.GameState):
+def register_state(name: str, state_object: states.GameState):
     global __states
     
-    if not isinstance(state_object, states.GameState):
-        raise TypeError(f"Tipo incorreto. Esperado: {states.GameState} | Recebido: {type(state_object)}.")
-
-    __states.append(state_object)
-    _update_state()
+    if name in __states:
+        raise KeyError(f"Um state já foi registrado com o nome \"{name}\".")
+    
+    __states[name] = state_object
+    
+def push_state(name: str):
+    global __state_stack
+    
+    if not name in __states:
+        raise KeyError(f"Nenhum state foi registrado com o nome \"{name}\".")
+    
+    __state_stack.append(__states[name])
 
 def pop_state():
-    global __states
+    global __state_stack
     
-    if __states:
-        __states.pop()
-        _update_state()
-
-def _update_state():
-    global __current_state
-    
-    try:
-        __current_state = __states[-1]
-    except IndexError:
-        __current_state = None
+    if __state_stack:
+        __state_stack.pop()
 
 def get_current_state():
-    return __current_state
-
-__current_state: states.GameState = None
+    try:
+        return __state_stack[-1]
+    except IndexError:
+        return None
 
 __display = pygame.display.set_mode(const.WINDOW_SIZE)
 __clock = pygame.time.Clock()
@@ -56,4 +55,5 @@ __clock = pygame.time.Clock()
 pygame.display.set_icon(pygame.Surface((0, 0)))
 pygame.display.set_caption(f"FPS: {round(__clock.get_fps(), 2)}")
 
-__states = []
+__states = {}
+__state_stack = []
