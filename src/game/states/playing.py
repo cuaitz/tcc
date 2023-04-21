@@ -4,6 +4,7 @@ import random
 import pygame
 
 from .. import const
+from .. import core
 
 from . import state
 
@@ -51,7 +52,7 @@ class PlayingState(state.GameState):
                 _targets.remove(target)
                 _lives -= 1
                 if _lives <= 0:
-                    restart_game()
+                    core.push_state('gameover')
                 update_gui()
             
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
