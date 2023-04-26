@@ -14,7 +14,18 @@ class SplashState(state.GameState):
         pass
     
     def render(self, surface: pygame.Surface):
-        surface.fill("#232323")
+        surface.fill("#181818")
+        
+        display = pygame.display.get_surface()
+        surface.fill(
+            "#232323", 
+            pygame.Rect(
+                20, 
+                20, 
+                display.get_width() - 20 * 2,
+                display.get_height() - 20 * 2
+            )
+        )
         
         texts = [_gameover_text, _continue_text]
         height = 50
