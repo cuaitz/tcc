@@ -14,7 +14,7 @@ def click(position: tuple[int, int]) -> None:
 
 def find_window():
     while True:
-        target = cv2.imread("img/sample.png")
+        target = cv2.imread("img/top_left.png")
         screenshot = np.array(ImageGrab.grab())
 
         result = cv2.matchTemplate(screenshot, target, cv2.TM_CCOEFF_NORMED)
