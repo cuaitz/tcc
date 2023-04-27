@@ -1,8 +1,10 @@
 import time
+import typing
 
 import cv2
 import numpy as np
 from PIL import ImageGrab
+import pygame
 import win32api
 import win32con
 
@@ -38,4 +40,39 @@ def find_window():
         #return
 
 
-find_window()
+def loop():
+    while True:
+        delta_time_seconds: float = 0
+        get_current_state().update(delta_time_seconds)
+
+def register_state(name: str, function: typing.Callable[[float], None]):
+    global __states
+    
+    if name in __states:
+        raise KeyError(f"Um state já foi registrado com o nome \"{name}\".")
+    
+    __states[name] = function
+    
+def push_state(name: str):
+    global __state_stack
+    
+    if not name in __states:
+        raise KeyError(f"Nenhum state foi registrado com o nome \"{name}\".")
+    
+    __state_stack.append(__states[name])
+
+def pop_state():
+    global __state_stack
+    
+    if __state_stack:
+        __state_stack.pop()
+
+def get_current_state():
+    try:
+        return __state_stack[-1]
+    except IndexError:
+        return None
+
+
+__states = {}
+__state_stack = []
