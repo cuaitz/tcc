@@ -43,7 +43,12 @@ def find_window():
 def loop():
     while True:
         delta_time_seconds: float = 0
-        get_current_state().update(delta_time_seconds)
+        
+        function = get_current_state()
+        if function is None:
+            return
+    
+        function()
 
 def register_state(name: str, function: typing.Callable[[float], None]):
     global __states
