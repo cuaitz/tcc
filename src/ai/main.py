@@ -14,30 +14,45 @@ def click(position: tuple[int, int]) -> None:
     time.sleep(.005)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
 
+def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999):
+    result = cv2.matchTemplate(haystack, needle, cv2.TM_CCOEFF_NORMED)
+    
+    #  Filtra os resultados menores que o mínimo e inverte a coord X e Y
+    matches = np.array(np.where(result >= threshold)[::-1])
+    
+    #  Retorna nada caso nenhum resultado tenha sido encontrado
+    if matches.size == 0:
+        return
+    
+    #? Encontrar uma forma de sempre utilizar o MELHOR match ao invés do primeiro
+    chosen_match = [i[0] for i in matches]
+    
+    position_x, position_y = chosen_match
+    height, width, _ = needle.shape  # needle.shape = (rows, columns, channels)
+    return pygame.Rect(
+        position_x,
+        position_y,
+        width,
+        height
+    )
+    
+    
+    
 def find_window():
-    while True:
-        target = cv2.imread("img/top_left.png")
-        screenshot = np.array(ImageGrab.grab())
-
-        result = cv2.matchTemplate(screenshot, target, cv2.TM_CCOEFF_NORMED)
-        threshold = .999
-
-        match = np.where(result >= threshold)[::-1]
-        
-        
-        try:
-            position = tuple([i[0] for i in match])  #TODO Encontrar uma forma melhor de fazer isso...
-
-        except IndexError:
-            print("Janela não encontrada. Tentando novamente...")
-            time.sleep(1)
-            continue
-        
-        win32api.SetCursorPos(position)
-        print(f"Janela encontrada! (X: {position[0]} | Y: {position[1]})")
-        print(f"Posições totais encontradas: {len(match[0])}")
-        len(match[0]) > 1 and print(match)
-        #return
+    global _window_rect
+    
+    screenshot = np.array(ImageGrab.grab())
+    top_left = find_in_image(_top_left_corner, screenshot)
+    bottom_right = find_in_image(_bottom_right_corner, screenshot)
+    
+    if top_left and bottom_right:
+        _window_rect = pygame.Rect(
+            top_left.left,
+            top_left.top,
+            bottom_right.right - top_left.left,
+            bottom_right.bottom - top_left.top
+        )
+        pop_state()
 
 
 def loop():
@@ -81,3 +96,16 @@ def get_current_state():
 
 __states = {}
 __state_stack = []
+
+
+_top_left_corner: np.array = cv2.imread("img/top_left.png")
+_bottom_right_corner: np.array = cv2.imread("img/bottom_right.png")
+
+_window_rect: pygame.Rect = None
+
+
+register_state('find_window', find_window)
+push_state('find_window')
+
+loop()
+
