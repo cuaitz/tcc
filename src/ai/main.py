@@ -59,8 +59,6 @@ def find_window():
 
 def loop():
     while True:
-        delta_time_seconds: float = 0
-        
         function = get_current_state()
         if function is None:
             return
