@@ -8,6 +8,15 @@ import pygame
 import win32api
 import win32con
 
+
+class Rectangle(pygame.Rect):
+    def __init__(self, left: int, top: int, width: int, height: int):
+        super().__init__(left, top, width, height)
+    
+    def absolute_rect(self) -> tuple[int, int, int, int]:
+        return (self.left, self.top, self.right, self.bottom)
+
+
 def click(position: tuple[int, int]) -> None:
     win32api.SetCursorPos(position)
     time.sleep(.01)
