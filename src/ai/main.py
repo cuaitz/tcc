@@ -107,11 +107,11 @@ __states = {}
 __state_stack = []
 
 
-_top_left_corner: np.array = cv2.imread("img/top_left.png")
-_bottom_right_corner: np.array = cv2.imread("img/bottom_right.png")
+_top_left_corner_image: np.array = cv2.imread("img/top_left.png")
+_bottom_right_corner_image: np.array = cv2.imread("img/bottom_right.png")
+_target_image: np.array = cv2.imread("img/target.png")
 
-_window_rect: pygame.Rect = None
-
+_window_rect: Rectangle = None
 
 register_state('find_window', find_window)
 push_state('find_window')
