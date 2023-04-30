@@ -76,6 +76,32 @@ def find_window():
         win32api.SetCursorPos(_window_rect.center)
         time.sleep(.25)
 
+        push_state('play_game')
+
+def play_game():
+    screenshot = cv2.cvtColor(
+        np.array(
+            ImageGrab.grab(
+                bbox=(
+                    _window_rect.left,
+                    _window_rect.top,
+                    _window_rect.right,
+                    _window_rect.bottom
+                )
+            )
+        ), 
+        cv2.COLOR_RGB2BGR
+    )
+    #  Encontra os alvos na tela
+    targets = find_in_image(_target_image, screenshot, .99)
+    
+    for target in targets:
+        click(
+            (
+                _window_rect.left + target.centerx,
+                _window_rect.top + target.bottom
+            )
+        )
 
 def loop():
     while True:
@@ -125,6 +151,7 @@ _target_image: np.array = cv2.imread("img/target.png")
 _window_rect: Rectangle = None
 
 register_state('find_window', find_window)
+register_state('play_game', play_game)
 push_state('find_window')
 
 loop()
