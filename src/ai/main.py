@@ -52,18 +52,29 @@ def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999)
 def find_window():
     global _window_rect
     
-    screenshot = np.array(ImageGrab.grab())
     top_left = find_in_image(_top_left_corner, screenshot)
     bottom_right = find_in_image(_bottom_right_corner, screenshot)
+    screenshot = cv2.cvtColor(np.array(ImageGrab.grab()), cv2.COLOR_RGB2BGR)
     
     if top_left and bottom_right:
-        _window_rect = pygame.Rect(
+        _window_rect = Rectangle(
             top_left.left,
             top_left.top,
             bottom_right.right - top_left.left,
             bottom_right.bottom - top_left.top
         )
-        pop_state()
+        
+        #  Coloca o mouse em cada ponta para confirmar que a janela foi encontrada corretamente
+        win32api.SetCursorPos(_window_rect.topleft)
+        time.sleep(.25)
+        win32api.SetCursorPos(_window_rect.topright)
+        time.sleep(.25)
+        win32api.SetCursorPos(_window_rect.bottomright)
+        time.sleep(.25)
+        win32api.SetCursorPos(_window_rect.bottomleft)
+        time.sleep(.25)
+        win32api.SetCursorPos(_window_rect.center)
+        time.sleep(.25)
 
 
 def loop():
