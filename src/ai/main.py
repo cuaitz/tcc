@@ -10,7 +10,7 @@ import win32con
 
 
 class Rectangle(pygame.Rect):
-    def __init__(self, left: int, top: int, width: int, height: int):
+    def __init__(self, left: int, top: int, width: int, height: int) -> None:
         super().__init__(left, top, width, height)
     
     def absolute_rect(self) -> tuple[int, int, int, int]:
@@ -25,7 +25,7 @@ def click(position: tuple[int, int]) -> None:
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
     time.sleep(.01)
 
-def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999, best_only=False):
+def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999, best_only=False) -> typing.List[None | Rectangle]:
     result = cv2.matchTemplate(haystack, needle, cv2.TM_CCOEFF_NORMED)
     
     #  Filtra os resultados menores que o mínimo e inverte a coord X e Y
@@ -54,7 +54,7 @@ def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999,
     else:
         return [i[1] for i in output]
 
-def find_window():
+def find_window() -> None:
     global _window_rect
     
     screenshot = cv2.cvtColor(np.array(ImageGrab.grab()), cv2.COLOR_RGB2BGR)
@@ -83,7 +83,7 @@ def find_window():
 
         push_state('play_game')
 
-def play_game():
+def play_game() -> None:
     screenshot = cv2.cvtColor(
         np.array(
             ImageGrab.grab(
@@ -108,7 +108,7 @@ def play_game():
             )
         )
 
-def loop():
+def loop() -> None:
     while True:
         function = get_current_state()
         if function is None:
@@ -116,7 +116,7 @@ def loop():
     
         function()
 
-def register_state(name: str, function: typing.Callable[[float], None]):
+def register_state(name: str, function: typing.Callable[[float], None]) -> None:
     global __states
     
     if name in __states:
@@ -124,7 +124,7 @@ def register_state(name: str, function: typing.Callable[[float], None]):
     
     __states[name] = function
     
-def push_state(name: str):
+def push_state(name: str) -> None:
     global __state_stack
     
     if not name in __states:
@@ -132,22 +132,20 @@ def push_state(name: str):
     
     __state_stack.append(__states[name])
 
-def pop_state():
+def pop_state() -> None:
     global __state_stack
     
     if __state_stack:
         __state_stack.pop()
 
-def get_current_state():
+def get_current_state() -> None | typing.Callable:
     try:
         return __state_stack[-1]
     except IndexError:
         return None
 
-
 __states = {}
 __state_stack = []
-
 
 _top_left_corner_image: np.array = cv2.imread("img/top_left.png")
 _bottom_right_corner_image: np.array = cv2.imread("img/bottom_right.png")
@@ -160,4 +158,3 @@ register_state('play_game', play_game)
 push_state('find_window')
 
 loop()
-
