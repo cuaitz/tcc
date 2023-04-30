@@ -25,36 +25,41 @@ def click(position: tuple[int, int]) -> None:
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
     time.sleep(.01)
 
-def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999):
+def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999, best_only=False):
     result = cv2.matchTemplate(haystack, needle, cv2.TM_CCOEFF_NORMED)
     
     #  Filtra os resultados menores que o mínimo e inverte a coord X e Y
     matches = np.array(np.where(result >= threshold)[::-1])
     
-    #  Retorna nada caso nenhum resultado tenha sido encontrado
-    if matches.size == 0:
-        return
-    
-    #? Encontrar uma forma de sempre utilizar o MELHOR match ao invés do primeiro
-    chosen_match = [i[0] for i in matches]
-    
-    position_x, position_y = chosen_match
     height, width, _ = needle.shape  # needle.shape = (rows, columns, channels)
-    return pygame.Rect(
-        position_x,
-        position_y,
-        width,
-        height
-    )
     
+    output = []
+    for x, y in zip(*matches):
+        output.append(
+            (
+                result[y][x],
+                Rectangle(
+                    x,
+                    y,
+                    width,
+                    height
+                )
+            )
+        )
     
+    output.sort(key=lambda x: x[0])
     
+    if best_only:
+        return output[0][1]
+    else:
+        return [i[1] for i in output]
+
 def find_window():
     global _window_rect
     
-    top_left = find_in_image(_top_left_corner, screenshot)
-    bottom_right = find_in_image(_bottom_right_corner, screenshot)
     screenshot = cv2.cvtColor(np.array(ImageGrab.grab()), cv2.COLOR_RGB2BGR)
+    top_left = find_in_image(_top_left_corner_image, screenshot, best_only=True)
+    bottom_right = find_in_image(_bottom_right_corner_image, screenshot, best_only=True)
     
     if top_left and bottom_right:
         _window_rect = Rectangle(
