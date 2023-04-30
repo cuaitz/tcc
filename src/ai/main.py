@@ -10,9 +10,11 @@ import win32con
 
 def click(position: tuple[int, int]) -> None:
     win32api.SetCursorPos(position)
+    time.sleep(.01)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-    time.sleep(.005)
+    time.sleep(.01)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
+    time.sleep(.01)
 
 def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999):
     result = cv2.matchTemplate(haystack, needle, cv2.TM_CCOEFF_NORMED)
