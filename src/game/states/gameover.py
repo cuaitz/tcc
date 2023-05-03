@@ -1,4 +1,7 @@
+import json
+
 import pygame
+import keyboard
 
 from . import state
 from . import playing
@@ -9,11 +12,19 @@ class GameOverState(state.GameState):
     def process_event(self, event: pygame.event.Event):
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r:
+                with open("data.json", "r") as file:
+                    data = json.load(file)
+                
+                with open("data.json", "w") as file:
+                    data.append(playing.get_score())
+                    json.dump(data, file, indent=4)
+                    
                 core.pop_state()
                 playing.restart_game()
 
     def update(self, delta_time_seconds: float):
         update_gui()
+        keyboard.press_and_release('r')
     
     def render(self, surface: pygame.Surface):
         surface.fill("#232323")

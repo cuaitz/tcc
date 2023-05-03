@@ -133,6 +133,9 @@ def update_gui():
     _lives_text = font.render(f"Vidas: {_lives}", True, "#eeeeee")
     _score_text = font.render(f"Pontos: {_score}", True, "#eeeeee")
 
+def get_score():
+    return _score
+
 _targets: list[Target] = []
 
 _level: int = 1
