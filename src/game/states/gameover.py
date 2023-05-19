@@ -1,4 +1,5 @@
 import json
+import os
 
 import pygame
 import keyboard
@@ -15,14 +16,23 @@ class GameOverState(state.GameState):
             if event.key == pygame.K_r:
                 core.pop_state()
                 
-                with open('data.json', 'w+') as file:
+                uid = 0
+                filename = f"data\\base\\data{uid}.json"
+                
+                while os.path.exists(filename):
+                    uid += 1
+                    filename = f"data\\base\\data{uid}.json"
+                    
+                    assert uid < 10  # Crasha dps da 10th partida
+                
+                with open(filename, 'w+') as file:
                     json.dump(playing._run_data, file, indent=4)
                     
                 playing.restart_game()
 
     def update(self, delta_time_seconds: float):
         update_gui()
-        #keyboard.press_and_release('r')
+        keyboard.press_and_release('r')
     
     def render(self, surface: pygame.Surface):
         surface.fill("#181818")

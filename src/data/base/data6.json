@@ -1,0 +1,2704 @@
+[
+    {
+        "dead_targets": [
+            {
+                "final_position": [
+                    133,
+                    51
+                ],
+                "time_alive": 0.2790360450744629,
+                "killed": true,
+                "kill_hit_position": [
+                    133,
+                    47
+                ],
+                "hit_accuracy": 0.6994733333333325
+            },
+            {
+                "final_position": [
+                    457,
+                    44
+                ],
+                "time_alive": 0.2460010051727295,
+                "killed": true,
+                "kill_hit_position": [
+                    457,
+                    38
+                ],
+                "hit_accuracy": 0.5390333333333326
+            },
+            {
+                "final_position": [
+                    121,
+                    54
+                ],
+                "time_alive": 0.3249552249908447,
+                "killed": true,
+                "kill_hit_position": [
+                    121,
+                    52
+                ],
+                "hit_accuracy": 0.8211666666666654
+            },
+            {
+                "final_position": [
+                    107,
+                    48
+                ],
+                "time_alive": 0.2789957523345947,
+                "killed": true,
+                "kill_hit_position": [
+                    107,
+                    42
+                ],
+                "hit_accuracy": 0.5370799999999993
+            },
+            {
+                "final_position": [
+                    524,
+                    64
+                ],
+                "time_alive": 0.40700197219848633,
+                "killed": true,
+                "kill_hit_position": [
+                    524,
+                    62
+                ],
+                "hit_accuracy": 0.8284933333333319
+            },
+            {
+                "final_position": [
+                    491,
+                    54
+                ],
+                "time_alive": 0.3240063190460205,
+                "killed": true,
+                "kill_hit_position": [
+                    491,
+                    50
+                ],
+                "hit_accuracy": 0.6959733333333318
+            },
+            {
+                "final_position": [
+                    454,
+                    46
+                ],
+                "time_alive": 0.2610039710998535,
+                "killed": true,
+                "kill_hit_position": [
+                    454,
+                    40
+                ],
+                "hit_accuracy": 0.5421266666666653
+            },
+            {
+                "final_position": [
+                    218,
+                    38
+                ],
+                "time_alive": 0.19199514389038086,
+                "killed": true,
+                "kill_hit_position": [
+                    218,
+                    34
+                ],
+                "hit_accuracy": 0.7037866666666655
+            },
+            {
+                "final_position": [
+                    424,
+                    53
+                ],
+                "time_alive": 0.31303977966308594,
+                "killed": true,
+                "kill_hit_position": [
+                    424,
+                    46
+                ],
+                "hit_accuracy": 0.518846666666666
+            },
+            {
+                "final_position": [
+                    162,
+                    73
+                ],
+                "time_alive": 0.46899843215942383,
+                "killed": true,
+                "kill_hit_position": [
+                    162,
+                    67
+                ],
+                "hit_accuracy": 0.5681576666666681
+            },
+            {
+                "final_position": [
+                    154,
+                    49
+                ],
+                "time_alive": 0.2790093421936035,
+                "killed": true,
+                "kill_hit_position": [
+                    154,
+                    43
+                ],
+                "hit_accuracy": 0.5524453666666682
+            },
+            {
+                "final_position": [
+                    229,
+                    76
+                ],
+                "time_alive": 0.49617934226989746,
+                "killed": true,
+                "kill_hit_position": [
+                    229,
+                    69
+                ],
+                "hit_accuracy": 0.4775341000000016
+            },
+            {
+                "final_position": [
+                    77,
+                    56
+                ],
+                "time_alive": 0.3330049514770508,
+                "killed": true,
+                "kill_hit_position": [
+                    77,
+                    49
+                ],
+                "hit_accuracy": 0.5045315666666691
+            },
+            {
+                "final_position": [
+                    296,
+                    54
+                ],
+                "time_alive": 0.31901049613952637,
+                "killed": true,
+                "kill_hit_position": [
+                    296,
+                    49
+                ],
+                "hit_accuracy": 0.620657366666669
+            },
+            {
+                "final_position": [
+                    509,
+                    56
+                ],
+                "time_alive": 0.3330042362213135,
+                "killed": true,
+                "kill_hit_position": [
+                    509,
+                    51
+                ],
+                "hit_accuracy": 0.6378649000000024
+            },
+            {
+                "final_position": [
+                    111,
+                    54
+                ],
+                "time_alive": 0.3170163631439209,
+                "killed": true,
+                "kill_hit_position": [
+                    111,
+                    51
+                ],
+                "hit_accuracy": 0.7705801000000022
+            },
+            {
+                "final_position": [
+                    285,
+                    54
+                ],
+                "time_alive": 0.31400275230407715,
+                "killed": true,
+                "kill_hit_position": [
+                    285,
+                    47
+                ],
+                "hit_accuracy": 0.5205028333333355
+            },
+            {
+                "final_position": [
+                    413,
+                    54
+                ],
+                "time_alive": 0.31696319580078125,
+                "killed": true,
+                "kill_hit_position": [
+                    413,
+                    47
+                ],
+                "hit_accuracy": 0.49561873333333517
+            },
+            {
+                "final_position": [
+                    518,
+                    54
+                ],
+                "time_alive": 0.3139967918395996,
+                "killed": true,
+                "kill_hit_position": [
+                    518,
+                    49
+                ],
+                "hit_accuracy": 0.6538361666666688
+            },
+            {
+                "final_position": [
+                    363,
+                    51
+                ],
+                "time_alive": 0.28395986557006836,
+                "killed": true,
+                "kill_hit_position": [
+                    363,
+                    48
+                ],
+                "hit_accuracy": 0.7873893575000002
+            },
+            {
+                "final_position": [
+                    409,
+                    36
+                ],
+                "time_alive": 0.1679975986480713,
+                "killed": true,
+                "kill_hit_position": [
+                    409,
+                    33
+                ],
+                "hit_accuracy": 0.7862948165000001
+            },
+            {
+                "final_position": [
+                    270,
+                    44
+                ],
+                "time_alive": 0.23199939727783203,
+                "killed": true,
+                "kill_hit_position": [
+                    270,
+                    41
+                ],
+                "hit_accuracy": 0.7609183168333331
+            },
+            {
+                "final_position": [
+                    166,
+                    52
+                ],
+                "time_alive": 0.2950000762939453,
+                "killed": true,
+                "kill_hit_position": [
+                    166,
+                    47
+                ],
+                "hit_accuracy": 0.6276043853333324
+            },
+            {
+                "final_position": [
+                    298,
+                    135
+                ],
+                "time_alive": 0.947002649307251,
+                "killed": true,
+                "kill_hit_position": [
+                    298,
+                    127
+                ],
+                "hit_accuracy": 0.4500270931666629
+            },
+            {
+                "final_position": [
+                    366,
+                    56
+                ],
+                "time_alive": 0.3280003070831299,
+                "killed": true,
+                "kill_hit_position": [
+                    366,
+                    49
+                ],
+                "hit_accuracy": 0.4815828021666656
+            },
+            {
+                "final_position": [
+                    385,
+                    42
+                ],
+                "time_alive": 0.21596026420593262,
+                "killed": true,
+                "kill_hit_position": [
+                    385,
+                    37
+                ],
+                "hit_accuracy": 0.6296964581666662
+            },
+            {
+                "final_position": [
+                    122,
+                    44
+                ],
+                "time_alive": 0.23200297355651855,
+                "killed": true,
+                "kill_hit_position": [
+                    122,
+                    39
+                ],
+                "hit_accuracy": 0.6275849834999998
+            },
+            {
+                "final_position": [
+                    408,
+                    50
+                ],
+                "time_alive": 0.28200316429138184,
+                "killed": true,
+                "kill_hit_position": [
+                    408,
+                    47
+                ],
+                "hit_accuracy": 0.7376532918333334
+            },
+            {
+                "final_position": [
+                    410,
+                    56
+                ],
+                "time_alive": 0.32999372482299805,
+                "killed": true,
+                "kill_hit_position": [
+                    410,
+                    53
+                ],
+                "hit_accuracy": 0.7397841683333326
+            },
+            {
+                "final_position": [
+                    230,
+                    43
+                ],
+                "time_alive": 0.2169942855834961,
+                "killed": true,
+                "kill_hit_position": [
+                    230,
+                    37
+                ],
+                "hit_accuracy": 0.588945694529166
+            },
+            {
+                "final_position": [
+                    356,
+                    53
+                ],
+                "time_alive": 0.29700303077697754,
+                "killed": true,
+                "kill_hit_position": [
+                    356,
+                    48
+                ],
+                "hit_accuracy": 0.6213785728249992
+            },
+            {
+                "final_position": [
+                    226,
+                    43
+                ],
+                "time_alive": 0.21599698066711426,
+                "killed": true,
+                "kill_hit_position": [
+                    226,
+                    39
+                ],
+                "hit_accuracy": 0.7309321198999996
+            },
+            {
+                "final_position": [
+                    27,
+                    58
+                ],
+                "time_alive": 0.33200860023498535,
+                "killed": true,
+                "kill_hit_position": [
+                    27,
+                    50
+                ],
+                "hit_accuracy": 0.45185368484583255
+            },
+            {
+                "final_position": [
+                    501,
+                    46
+                ],
+                "time_alive": 0.24100303649902344,
+                "killed": true,
+                "kill_hit_position": [
+                    501,
+                    41
+                ],
+                "hit_accuracy": 0.6479381522958334
+            },
+            {
+                "final_position": [
+                    338,
+                    58
+                ],
+                "time_alive": 0.3370065689086914,
+                "killed": true,
+                "kill_hit_position": [
+                    338,
+                    53
+                ],
+                "hit_accuracy": 0.6172413166958336
+            },
+            {
+                "final_position": [
+                    485,
+                    52
+                ],
+                "time_alive": 0.2889702320098877,
+                "killed": true,
+                "kill_hit_position": [
+                    485,
+                    45
+                ],
+                "hit_accuracy": 0.49925640116250014
+            },
+            {
+                "final_position": [
+                    128,
+                    44
+                ],
+                "time_alive": 0.22400236129760742,
+                "killed": true,
+                "kill_hit_position": [
+                    128,
+                    37
+                ],
+                "hit_accuracy": 0.528374050266667
+            },
+            {
+                "final_position": [
+                    130,
+                    58
+                ],
+                "time_alive": 0.3379952907562256,
+                "killed": true,
+                "kill_hit_position": [
+                    130,
+                    51
+                ],
+                "hit_accuracy": 0.475254891325
+            },
+            {
+                "final_position": [
+                    407,
+                    50
+                ],
+                "time_alive": 0.2740042209625244,
+                "killed": true,
+                "kill_hit_position": [
+                    407,
+                    43
+                ],
+                "hit_accuracy": 0.49571944839166704
+            },
+            {
+                "final_position": [
+                    45,
+                    45
+                ],
+                "time_alive": 0.22600889205932617,
+                "killed": true,
+                "kill_hit_position": [
+                    45,
+                    37
+                ],
+                "hit_accuracy": 0.46442832241863996
+            },
+            {
+                "final_position": [
+                    518,
+                    40
+                ],
+                "time_alive": 0.1939709186553955,
+                "killed": true,
+                "kill_hit_position": [
+                    518,
+                    35
+                ],
+                "hit_accuracy": 0.6145977634921072
+            },
+            {
+                "final_position": [
+                    122,
+                    38
+                ],
+                "time_alive": 0.17598915100097656,
+                "killed": true,
+                "kill_hit_position": [
+                    122,
+                    33
+                ],
+                "hit_accuracy": 0.6407347407625992
+            },
+            {
+                "final_position": [
+                    96,
+                    57
+                ],
+                "time_alive": 0.32300257682800293,
+                "killed": true,
+                "kill_hit_position": [
+                    96,
+                    50
+                ],
+                "hit_accuracy": 0.4717272041646926
+            },
+            {
+                "final_position": [
+                    390,
+                    53
+                ],
+                "time_alive": 0.2890017032623291,
+                "killed": true,
+                "kill_hit_position": [
+                    390,
+                    48
+                ],
+                "hit_accuracy": 0.6396155686385849
+            },
+            {
+                "final_position": [
+                    248,
+                    51
+                ],
+                "time_alive": 0.2740051746368408,
+                "killed": true,
+                "kill_hit_position": [
+                    248,
+                    43
+                ],
+                "hit_accuracy": 0.4391741608084393
+            },
+            {
+                "final_position": [
+                    129,
+                    49
+                ],
+                "time_alive": 0.25800013542175293,
+                "killed": true,
+                "kill_hit_position": [
+                    129,
+                    41
+                ],
+                "hit_accuracy": 0.45645167637871864
+            },
+            {
+                "final_position": [
+                    104,
+                    46
+                ],
+                "time_alive": 0.24001359939575195,
+                "killed": true,
+                "kill_hit_position": [
+                    104,
+                    41
+                ],
+                "hit_accuracy": 0.6070625252823314
+            },
+            {
+                "final_position": [
+                    188,
+                    74
+                ],
+                "time_alive": 0.45096611976623535,
+                "killed": true,
+                "kill_hit_position": [
+                    188,
+                    67
+                ],
+                "hit_accuracy": 0.4799089015710365
+            },
+            {
+                "final_position": [
+                    101,
+                    49
+                ],
+                "time_alive": 0.2570016384124756,
+                "killed": true,
+                "kill_hit_position": [
+                    101,
+                    43
+                ],
+                "hit_accuracy": 0.5986444714122645
+            },
+            {
+                "final_position": [
+                    249,
+                    43
+                ],
+                "time_alive": 0.21003985404968262,
+                "killed": true,
+                "kill_hit_position": [
+                    249,
+                    37
+                ],
+                "hit_accuracy": 0.5677135453449162
+            },
+            {
+                "final_position": [
+                    468,
+                    76
+                ],
+                "time_alive": 0.4500093460083008,
+                "killed": true,
+                "kill_hit_position": [
+                    468,
+                    68
+                ],
+                "hit_accuracy": 0.44467828742525717
+            },
+            {
+                "final_position": [
+                    80,
+                    58
+                ],
+                "time_alive": 0.31995391845703125,
+                "killed": true,
+                "kill_hit_position": [
+                    80,
+                    52
+                ],
+                "hit_accuracy": 0.5591786340209239
+            },
+            {
+                "final_position": [
+                    93,
+                    41
+                ],
+                "time_alive": 0.1930227279663086,
+                "killed": true,
+                "kill_hit_position": [
+                    93,
+                    33
+                ],
+                "hit_accuracy": 0.4555071804125551
+            },
+            {
+                "final_position": [
+                    141,
+                    43
+                ],
+                "time_alive": 0.20800399780273438,
+                "killed": true,
+                "kill_hit_position": [
+                    141,
+                    37
+                ],
+                "hit_accuracy": 0.5677135453449162
+            },
+            {
+                "final_position": [
+                    335,
+                    49
+                ],
+                "time_alive": 0.25600314140319824,
+                "killed": true,
+                "kill_hit_position": [
+                    335,
+                    41
+                ],
+                "hit_accuracy": 0.4073429072167395
+            },
+            {
+                "final_position": [
+                    412,
+                    52
+                ],
+                "time_alive": 0.2729673385620117,
+                "killed": true,
+                "kill_hit_position": [
+                    412,
+                    46
+                ],
+                "hit_accuracy": 0.5862159388157678
+            },
+            {
+                "final_position": [
+                    513,
+                    59
+                ],
+                "time_alive": 0.32302141189575195,
+                "killed": true,
+                "kill_hit_position": [
+                    513,
+                    48
+                ],
+                "hit_accuracy": 0.2561683669461857
+            },
+            {
+                "final_position": [
+                    479,
+                    43
+                ],
+                "time_alive": 0.20896148681640625,
+                "killed": true,
+                "kill_hit_position": [
+                    479,
+                    35
+                ],
+                "hit_accuracy": 0.43438021201158294
+            },
+            {
+                "final_position": [
+                    346,
+                    52
+                ],
+                "time_alive": 0.27500343322753906,
+                "killed": true,
+                "kill_hit_position": [
+                    346,
+                    44
+                ],
+                "hit_accuracy": 0.4437967053804167
+            },
+            {
+                "final_position": [
+                    44,
+                    87
+                ],
+                "time_alive": 0.5200073719024658,
+                "killed": true,
+                "kill_hit_position": [
+                    44,
+                    81
+                ],
+                "hit_accuracy": 0.5369813866244926
+            },
+            {
+                "final_position": [
+                    46,
+                    51
+                ],
+                "time_alive": 0.2580099105834961,
+                "killed": true,
+                "kill_hit_position": [
+                    46,
+                    44
+                ],
+                "hit_accuracy": 0.5251590487826978
+            },
+            {
+                "final_position": [
+                    363,
+                    39
+                ],
+                "time_alive": 0.17699360847473145,
+                "killed": true,
+                "kill_hit_position": [
+                    363,
+                    33
+                ],
+                "hit_accuracy": 0.5478804326920056
+            },
+            {
+                "final_position": [
+                    501,
+                    53
+                ],
+                "time_alive": 0.2750072479248047,
+                "killed": true,
+                "kill_hit_position": [
+                    501,
+                    44
+                ],
+                "hit_accuracy": 0.36648089825029095
+            },
+            {
+                "final_position": [
+                    541,
+                    39
+                ],
+                "time_alive": 0.1770017147064209,
+                "killed": true,
+                "kill_hit_position": [
+                    541,
+                    33
+                ],
+                "hit_accuracy": 0.5572144415468528
+            },
+            {
+                "final_position": [
+                    363,
+                    50
+                ],
+                "time_alive": 0.2569737434387207,
+                "killed": true,
+                "kill_hit_position": [
+                    363,
+                    44
+                ],
+                "hit_accuracy": 0.5344930576375451
+            },
+            {
+                "final_position": [
+                    21,
+                    62
+                ],
+                "time_alive": 0.3359696865081787,
+                "killed": true,
+                "kill_hit_position": [
+                    21,
+                    55
+                ],
+                "hit_accuracy": 0.530439691437933
+            },
+            {
+                "final_position": [
+                    365,
+                    80
+                ],
+                "time_alive": 0.46599268913269043,
+                "killed": true,
+                "kill_hit_position": [
+                    365,
+                    71
+                ],
+                "hit_accuracy": 0.38368520697443487
+            },
+            {
+                "final_position": [
+                    259,
+                    46
+                ],
+                "time_alive": 0.22699809074401855,
+                "killed": true,
+                "kill_hit_position": [
+                    259,
+                    37
+                ],
+                "hit_accuracy": 0.34784665661630076
+            },
+            {
+                "final_position": [
+                    365,
+                    55
+                ],
+                "time_alive": 0.29199743270874023,
+                "killed": true,
+                "kill_hit_position": [
+                    365,
+                    51
+                ],
+                "hit_accuracy": 0.6744694143845517
+            },
+            {
+                "final_position": [
+                    372,
+                    45
+                ],
+                "time_alive": 0.20900440216064453,
+                "killed": true,
+                "kill_hit_position": [
+                    372,
+                    37
+                ],
+                "hit_accuracy": 0.45911537522858714
+            },
+            {
+                "final_position": [
+                    57,
+                    61
+                ],
+                "time_alive": 0.32399892807006836,
+                "killed": true,
+                "kill_hit_position": [
+                    57,
+                    51
+                ],
+                "hit_accuracy": 0.2878152228424019
+            },
+            {
+                "final_position": [
+                    391,
+                    84
+                ],
+                "time_alive": 0.4799814224243164,
+                "killed": true,
+                "kill_hit_position": [
+                    391,
+                    74
+                ],
+                "hit_accuracy": 0.3226892190257843
+            },
+            {
+                "final_position": [
+                    210,
+                    52
+                ],
+                "time_alive": 0.2569758892059326,
+                "killed": true,
+                "kill_hit_position": [
+                    210,
+                    44
+                ],
+                "hit_accuracy": 0.4647176304644982
+            },
+            {
+                "final_position": [
+                    256,
+                    42
+                ],
+                "time_alive": 0.1940004825592041,
+                "killed": true,
+                "kill_hit_position": [
+                    256,
+                    35
+                ],
+                "hit_accuracy": 0.4794701790388387
+            },
+            {
+                "final_position": [
+                    293,
+                    61
+                ],
+                "time_alive": 0.32100391387939453,
+                "killed": true,
+                "kill_hit_position": [
+                    293,
+                    54
+                ],
+                "hit_accuracy": 0.5166317485568253
+            },
+            {
+                "final_position": [
+                    330,
+                    56
+                ],
+                "time_alive": 0.2890126705169678,
+                "killed": true,
+                "kill_hit_position": [
+                    330,
+                    47
+                ],
+                "hit_accuracy": 0.3477358476058551
+            },
+            {
+                "final_position": [
+                    316,
+                    47
+                ],
+                "time_alive": 0.2250049114227295,
+                "killed": true,
+                "kill_hit_position": [
+                    316,
+                    38
+                ],
+                "hit_accuracy": 0.3720939047516689
+            },
+            {
+                "final_position": [
+                    62,
+                    63
+                ],
+                "time_alive": 0.340012788772583,
+                "killed": true,
+                "kill_hit_position": [
+                    62,
+                    56
+                ],
+                "hit_accuracy": 0.4674604190321513
+            },
+            {
+                "final_position": [
+                    142,
+                    56
+                ],
+                "time_alive": 0.28998351097106934,
+                "killed": true,
+                "kill_hit_position": [
+                    142,
+                    49
+                ],
+                "hit_accuracy": 0.49067468951066173
+            },
+            {
+                "final_position": [
+                    196,
+                    84
+                ],
+                "time_alive": 0.4699990749359131,
+                "killed": true,
+                "kill_hit_position": [
+                    196,
+                    74
+                ],
+                "hit_accuracy": 0.2792770381068276
+            },
+            {
+                "final_position": [
+                    351,
+                    60
+                ],
+                "time_alive": 0.30698180198669434,
+                "killed": true,
+                "kill_hit_position": [
+                    351,
+                    50
+                ],
+                "hit_accuracy": 0.30324561771777825
+            },
+            {
+                "final_position": [
+                    462,
+                    60
+                ],
+                "time_alive": 0.3090064525604248,
+                "killed": true,
+                "kill_hit_position": [
+                    462,
+                    50
+                ],
+                "hit_accuracy": 0.2834411228444741
+            },
+            {
+                "final_position": [
+                    278,
+                    63
+                ],
+                "time_alive": 0.32401156425476074,
+                "killed": true,
+                "kill_hit_position": [
+                    278,
+                    52
+                ],
+                "hit_accuracy": 0.25833849719137303
+            },
+            {
+                "final_position": [
+                    298,
+                    64
+                ],
+                "time_alive": 0.33600568771362305,
+                "killed": true,
+                "kill_hit_position": [
+                    298,
+                    52
+                ],
+                "hit_accuracy": 0.13951152795154653
+            },
+            {
+                "final_position": [
+                    154,
+                    62
+                ],
+                "time_alive": 0.32099270820617676,
+                "killed": true,
+                "kill_hit_position": [
+                    154,
+                    54
+                ],
+                "hit_accuracy": 0.4213785728346626
+            },
+            {
+                "final_position": [
+                    544,
+                    62
+                ],
+                "time_alive": 0.3230013847351074,
+                "killed": true,
+                "kill_hit_position": [
+                    544,
+                    55
+                ],
+                "hit_accuracy": 0.4682407446280251
+            },
+            {
+                "final_position": [
+                    312,
+                    60
+                ],
+                "time_alive": 0.3049936294555664,
+                "killed": true,
+                "kill_hit_position": [
+                    312,
+                    52
+                ],
+                "hit_accuracy": 0.4464811984877637
+            },
+            {
+                "final_position": [
+                    62,
+                    62
+                ],
+                "time_alive": 0.32200026512145996,
+                "killed": true,
+                "kill_hit_position": [
+                    62,
+                    52
+                ],
+                "hit_accuracy": 0.27814299206467774
+            },
+            {
+                "final_position": [
+                    133,
+                    63
+                ],
+                "time_alive": 0.32599329948425293,
+                "killed": true,
+                "kill_hit_position": [
+                    133,
+                    52
+                ],
+                "hit_accuracy": 0.23853400231806987
+            },
+            {
+                "final_position": [
+                    290,
+                    66
+                ],
+                "time_alive": 0.3370077610015869,
+                "killed": true,
+                "kill_hit_position": [
+                    290,
+                    53
+                ],
+                "hit_accuracy": 0.08710043302427262
+            },
+            {
+                "final_position": [
+                    21,
+                    47
+                ],
+                "time_alive": 0.21199393272399902,
+                "killed": true,
+                "kill_hit_position": [
+                    21,
+                    35
+                ],
+                "hit_accuracy": 0.16537673135849218
+            },
+            {
+                "final_position": [
+                    478,
+                    49
+                ],
+                "time_alive": 0.22499775886535645,
+                "killed": true,
+                "kill_hit_position": [
+                    478,
+                    38
+                ],
+                "hit_accuracy": 0.2324359963317344
+            },
+            {
+                "final_position": [
+                    316,
+                    55
+                ],
+                "time_alive": 0.2609996795654297,
+                "killed": true,
+                "kill_hit_position": [
+                    316,
+                    45
+                ],
+                "hit_accuracy": 0.3309590890781441
+            },
+            {
+                "final_position": [
+                    394,
+                    59
+                ],
+                "time_alive": 0.2919886112213135,
+                "killed": true,
+                "kill_hit_position": [
+                    394,
+                    48
+                ],
+                "hit_accuracy": 0.2037203567045841
+            },
+            {
+                "final_position": [
+                    483,
+                    64
+                ],
+                "time_alive": 0.32100558280944824,
+                "killed": true,
+                "kill_hit_position": [
+                    483,
+                    53
+                ],
+                "hit_accuracy": 0.2507197992110519
+            },
+            {
+                "final_position": [
+                    174,
+                    64
+                ],
+                "time_alive": 0.32101011276245117,
+                "killed": true,
+                "kill_hit_position": [
+                    174,
+                    55
+                ],
+                "hit_accuracy": 0.38405313254438533
+            },
+            {
+                "final_position": [
+                    426,
+                    69
+                ],
+                "time_alive": 0.3530101776123047,
+                "killed": true,
+                "kill_hit_position": [
+                    426,
+                    58
+                ],
+                "hit_accuracy": 0.2568144001708258
+            },
+            {
+                "final_position": [
+                    496,
+                    47
+                ],
+                "time_alive": 0.2089989185333252,
+                "killed": true,
+                "kill_hit_position": [
+                    496,
+                    38
+                ],
+                "hit_accuracy": 0.3960553625185137
+            },
+            {
+                "final_position": [
+                    137,
+                    84
+                ],
+                "time_alive": 0.45200371742248535,
+                "killed": true,
+                "kill_hit_position": [
+                    137,
+                    73
+                ],
+                "hit_accuracy": 0.24441957189012087
+            },
+            {
+                "final_position": [
+                    277,
+                    63
+                ],
+                "time_alive": 0.30400872230529785,
+                "killed": true,
+                "kill_hit_position": [
+                    277,
+                    53
+                ],
+                "hit_accuracy": 0.31715653550405276
+            },
+            {
+                "final_position": [
+                    146,
+                    45
+                ],
+                "time_alive": 0.19200992584228516,
+                "killed": true,
+                "kill_hit_position": [
+                    146,
+                    36
+                ],
+                "hit_accuracy": 0.36873044347624384
+            },
+            {
+                "final_position": [
+                    279,
+                    55
+                ],
+                "time_alive": 0.2570018768310547,
+                "killed": true,
+                "kill_hit_position": [
+                    279,
+                    43
+                ],
+                "hit_accuracy": 0.14772772902809705
+            },
+            {
+                "final_position": [
+                    335,
+                    68
+                ],
+                "time_alive": 0.33699727058410645,
+                "killed": true,
+                "kill_hit_position": [
+                    335,
+                    56
+                ],
+                "hit_accuracy": 0.16803208047653106
+            },
+            {
+                "final_position": [
+                    318,
+                    53
+                ],
+                "time_alive": 0.24300098419189453,
+                "killed": true,
+                "kill_hit_position": [
+                    318,
+                    41
+                ],
+                "hit_accuracy": 0.16250780085795402
+            },
+            {
+                "final_position": [
+                    376,
+                    63
+                ],
+                "time_alive": 0.3079972267150879,
+                "killed": true,
+                "kill_hit_position": [
+                    376,
+                    53
+                ],
+                "hit_accuracy": 0.28541794868336867
+            },
+            {
+                "final_position": [
+                    65,
+                    50
+                ],
+                "time_alive": 0.22500133514404297,
+                "killed": true,
+                "kill_hit_position": [
+                    65,
+                    38
+                ],
+                "hit_accuracy": 0.1529393217820565
+            },
+            {
+                "final_position": [
+                    381,
+                    101
+                ],
+                "time_alive": 0.5469987392425537,
+                "killed": true,
+                "kill_hit_position": [
+                    381,
+                    87
+                ],
+                "hit_accuracy": 0.002418140755105491
+            },
+            {
+                "final_position": [
+                    361,
+                    56
+                ],
+                "time_alive": 0.2590043544769287,
+                "killed": true,
+                "kill_hit_position": [
+                    361,
+                    46
+                ],
+                "hit_accuracy": 0.326568671147641
+            },
+            {
+                "final_position": [
+                    105,
+                    104
+                ],
+                "time_alive": 0.5629944801330566,
+                "killed": true,
+                "kill_hit_position": [
+                    105,
+                    92
+                ],
+                "hit_accuracy": 0.1462615170866276
+            },
+            {
+                "final_position": [
+                    81,
+                    62
+                ],
+                "time_alive": 0.28799939155578613,
+                "killed": true,
+                "kill_hit_position": [
+                    81,
+                    49
+                ],
+                "hit_accuracy": 0.10889304944680256
+            },
+            {
+                "final_position": [
+                    60,
+                    69
+                ],
+                "time_alive": 0.33001041412353516,
+                "killed": true,
+                "kill_hit_position": [
+                    60,
+                    55
+                ],
+                "hit_accuracy": 0.05934888866203114
+            },
+            {
+                "final_position": [
+                    126,
+                    262
+                ],
+                "time_alive": 1.5065293312072754,
+                "killed": true,
+                "kill_hit_position": [
+                    126,
+                    249
+                ],
+                "hit_accuracy": 0.0765109682280316
+            },
+            {
+                "final_position": [
+                    222,
+                    77
+                ],
+                "time_alive": 0.37700748443603516,
+                "killed": true,
+                "kill_hit_position": [
+                    222,
+                    63
+                ],
+                "hit_accuracy": 0.06638661912538735
+            },
+            {
+                "final_position": [
+                    129,
+                    61
+                ],
+                "time_alive": 0.28104519844055176,
+                "killed": true,
+                "kill_hit_position": [
+                    129,
+                    50
+                ],
+                "hit_accuracy": 0.24134666647221747
+            },
+            {
+                "final_position": [
+                    112,
+                    81
+                ],
+                "time_alive": 0.40495777130126953,
+                "killed": true,
+                "kill_hit_position": [
+                    112,
+                    70
+                ],
+                "hit_accuracy": 0.22604751745123408
+            },
+            {
+                "final_position": [
+                    395,
+                    72
+                ],
+                "time_alive": 0.34804582595825195,
+                "killed": true,
+                "kill_hit_position": [
+                    395,
+                    58
+                ],
+                "hit_accuracy": 0.051023545859330444
+            },
+            {
+                "final_position": [
+                    435,
+                    61
+                ],
+                "time_alive": 0.2829933166503906,
+                "killed": true,
+                "kill_hit_position": [
+                    435,
+                    47
+                ],
+                "hit_accuracy": 0.041346666472216964
+            },
+            {
+                "final_position": [
+                    370,
+                    49
+                ],
+                "time_alive": 0.2120063304901123,
+                "killed": true,
+                "kill_hit_position": [
+                    370,
+                    36
+                ],
+                "hit_accuracy": 0.07552775399093392
+            },
+            {
+                "final_position": [
+                    381,
+                    61
+                ],
+                "time_alive": 0.28000545501708984,
+                "killed": true,
+                "kill_hit_position": [
+                    381,
+                    50
+                ],
+                "hit_accuracy": 0.25231115819867445
+            },
+            {
+                "final_position": [
+                    155,
+                    124
+                ],
+                "time_alive": 0.6410021781921387,
+                "killed": true,
+                "kill_hit_position": [
+                    155,
+                    112
+                ],
+                "hit_accuracy": 0.15842386917140816
+            },
+            {
+                "final_position": [
+                    129,
+                    93
+                ],
+                "time_alive": 0.4589965343475342,
+                "killed": true,
+                "kill_hit_position": [
+                    129,
+                    81
+                ],
+                "hit_accuracy": 0.17494790646367064
+            },
+            {
+                "final_position": [
+                    519,
+                    129
+                ],
+                "time_alive": 0.6689605712890625,
+                "killed": true,
+                "kill_hit_position": [
+                    519,
+                    118
+                ],
+                "hit_accuracy": 0.239684307909935
+            },
+            {
+                "final_position": [
+                    221,
+                    111
+                ],
+                "time_alive": 0.5639545917510986,
+                "killed": true,
+                "kill_hit_position": [
+                    221,
+                    98
+                ],
+                "hit_accuracy": 0.11300788506647164
+            },
+            {
+                "final_position": [
+                    294,
+                    99
+                ],
+                "time_alive": 0.49095940589904785,
+                "killed": true,
+                "kill_hit_position": [
+                    294,
+                    87
+                ],
+                "hit_accuracy": 0.19929056640550302
+            },
+            {
+                "final_position": [
+                    19,
+                    85
+                ],
+                "time_alive": 0.41203808784484863,
+                "killed": true,
+                "kill_hit_position": [
+                    19,
+                    73
+                ],
+                "hit_accuracy": 0.17664169381924444
+            },
+            {
+                "final_position": [
+                    173,
+                    579
+                ],
+                "time_alive": 3.290968179702759,
+                "killed": false,
+                "kill_hit_position": [
+                    0,
+                    0
+                ],
+                "hit_accuracy": 0
+            },
+            {
+                "final_position": [
+                    18,
+                    579
+                ],
+                "time_alive": 3.291992425918579,
+                "killed": false,
+                "kill_hit_position": [
+                    0,
+                    0
+                ],
+                "hit_accuracy": 0
+            },
+            {
+                "final_position": [
+                    288,
+                    49
+                ],
+                "time_alive": 0.1950087547302246,
+                "killed": true,
+                "kill_hit_position": [
+                    288,
+                    36
+                ],
+                "hit_accuracy": 0.07948573185545205
+            },
+            {
+                "final_position": [
+                    35,
+                    575
+                ],
+                "time_alive": 3.25399112701416,
+                "killed": false,
+                "kill_hit_position": [
+                    0,
+                    0
+                ],
+                "hit_accuracy": 0
+            }
+        ],
+        "level": 14,
+        "lives": 0,
+        "radius": 15,
+        "total_targets_spawned": 132,
+        "targets_per_level": 10,
+        "score": 872,
+        "clicks": 189,
+        "hits": 126,
+        "precision": 0.6666666666666666,
+        "accuracy": 0.42386877067299555,
+        "spawn_cooldown": 1,
+        "current_cooldown": 0.039817241017324395,
+        "game_time": 84.85680961608887
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 1,
+        "score": 1,
+        "clicks": 3,
+        "hits": 1,
+        "precision": 0.3333333333333333,
+        "accuracy": 0.6994733333333325,
+        "current_cooldown": 0.0015794392523357237,
+        "game_time": 0.914034366607666
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 3,
+        "score": 2,
+        "clicks": 4,
+        "hits": 2,
+        "precision": 0.5,
+        "accuracy": 0.6192533333333325,
+        "current_cooldown": 0.8855794392523364,
+        "game_time": 1.9230363368988037
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 4,
+        "score": 3,
+        "clicks": 5,
+        "hits": 3,
+        "precision": 0.6,
+        "accuracy": 0.6865577777777768,
+        "current_cooldown": 0.8215794392523363,
+        "game_time": 2.927032232284546
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 5,
+        "score": 4,
+        "clicks": 6,
+        "hits": 4,
+        "precision": 0.6666666666666666,
+        "accuracy": 0.6491883333333324,
+        "current_cooldown": 0.7565794392523363,
+        "game_time": 3.936030149459839
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 6,
+        "score": 5,
+        "clicks": 8,
+        "hits": 5,
+        "precision": 0.625,
+        "accuracy": 0.6850493333333323,
+        "current_cooldown": 0.6915794392523362,
+        "game_time": 4.948033094406128
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 7,
+        "score": 7,
+        "clicks": 10,
+        "hits": 7,
+        "precision": 0.7,
+        "accuracy": 0.6661923809523798,
+        "current_cooldown": 0.6235794392523362,
+        "game_time": 5.956029176712036
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 8,
+        "score": 8,
+        "clicks": 11,
+        "hits": 8,
+        "precision": 0.7272727272727273,
+        "accuracy": 0.6708916666666656,
+        "current_cooldown": 0.5655794392523361,
+        "game_time": 6.9600303173065186
+    },
+    {
+        "level": 1,
+        "lives": 3,
+        "total_targets_spawned": 9,
+        "score": 9,
+        "clicks": 12,
+        "hits": 9,
+        "precision": 0.75,
+        "accuracy": 0.6539977777777767,
+        "current_cooldown": 0.48857943925233605,
+        "game_time": 7.974032878875732
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 10,
+        "score": 11,
+        "clicks": 14,
+        "hits": 10,
+        "precision": 0.7142857142857143,
+        "accuracy": 0.6454137666666658,
+        "current_cooldown": 0.3724387282732111,
+        "game_time": 8.977028369903564
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 11,
+        "score": 13,
+        "clicks": 15,
+        "hits": 11,
+        "precision": 0.7333333333333333,
+        "accuracy": 0.6369620939393933,
+        "current_cooldown": 0.251438728273211,
+        "game_time": 9.988031148910522
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 12,
+        "score": 15,
+        "clicks": 17,
+        "hits": 12,
+        "precision": 0.7058823529411765,
+        "accuracy": 0.6236764277777773,
+        "current_cooldown": 0.1264387282732109,
+        "game_time": 10.99772047996521
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 13,
+        "score": 17,
+        "clicks": 18,
+        "hits": 13,
+        "precision": 0.7222222222222222,
+        "accuracy": 0.6145114384615382,
+        "current_cooldown": 0.006438728273210903,
+        "game_time": 11.998717069625854
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 15,
+        "score": 19,
+        "clicks": 19,
+        "hits": 14,
+        "precision": 0.7368421052631579,
+        "accuracy": 0.6149504333333332,
+        "current_cooldown": 0.7744387282732115,
+        "game_time": 13.000717878341675
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 16,
+        "score": 21,
+        "clicks": 20,
+        "hits": 15,
+        "precision": 0.75,
+        "accuracy": 0.6164780644444445,
+        "current_cooldown": 0.6574387282732114,
+        "game_time": 14.004716157913208
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 17,
+        "score": 25,
+        "clicks": 22,
+        "hits": 17,
+        "precision": 0.7727272727272727,
+        "accuracy": 0.6198972882352943,
+        "current_cooldown": 0.5434387282732113,
+        "game_time": 15.006714344024658
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 18,
+        "score": 27,
+        "clicks": 23,
+        "hits": 18,
+        "precision": 0.782608695652174,
+        "accuracy": 0.6129929240740745,
+        "current_cooldown": 0.42343872827321116,
+        "game_time": 16.008753299713135
+    },
+    {
+        "level": 2,
+        "lives": 3,
+        "total_targets_spawned": 19,
+        "score": 29,
+        "clicks": 24,
+        "hits": 19,
+        "precision": 0.7916666666666666,
+        "accuracy": 0.6151425684210531,
+        "current_cooldown": 0.29143872827321105,
+        "game_time": 17.021716117858887
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 20,
+        "score": 32,
+        "clicks": 25,
+        "hits": 20,
+        "precision": 0.8,
+        "accuracy": 0.6237549078750004,
+        "current_cooldown": 0.11629787689085126,
+        "game_time": 18.02171802520752
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 22,
+        "score": 35,
+        "clicks": 26,
+        "hits": 21,
+        "precision": 0.8076923076923077,
+        "accuracy": 0.6314949035238099,
+        "current_cooldown": 0.7512978768908518,
+        "game_time": 19.037717580795288
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 23,
+        "score": 38,
+        "clicks": 27,
+        "hits": 22,
+        "precision": 0.8148148148148148,
+        "accuracy": 0.63737778594697,
+        "current_cooldown": 0.5542978768908516,
+        "game_time": 20.051717042922974
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 24,
+        "score": 41,
+        "clicks": 29,
+        "hits": 23,
+        "precision": 0.7931034482758621,
+        "accuracy": 0.6369528554855076,
+        "current_cooldown": 0.36629787689085147,
+        "game_time": 21.06371235847473
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 25,
+        "score": 47,
+        "clicks": 32,
+        "hits": 25,
+        "precision": 0.78125,
+        "accuracy": 0.6232610228600001,
+        "current_cooldown": 0.1882978768908513,
+        "game_time": 22.072712182998657
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 26,
+        "score": 50,
+        "clicks": 33,
+        "hits": 26,
+        "precision": 0.7878787878787878,
+        "accuracy": 0.6235085396025641,
+        "current_cooldown": 0.0012978768908512572,
+        "game_time": 23.087719440460205
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 28,
+        "score": 53,
+        "clicks": 34,
+        "hits": 27,
+        "precision": 0.7941176470588235,
+        "accuracy": 0.6236595190061729,
+        "current_cooldown": 0.6342978768908517,
+        "game_time": 24.104710578918457
+    },
+    {
+        "level": 3,
+        "lives": 3,
+        "total_targets_spawned": 29,
+        "score": 59,
+        "clicks": 36,
+        "hits": 29,
+        "precision": 0.8055555555555556,
+        "accuracy": 0.6315946370114943,
+        "current_cooldown": 0.43729787689085153,
+        "game_time": 25.118715047836304
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 30,
+        "score": 63,
+        "clicks": 37,
+        "hits": 30,
+        "precision": 0.8108108108108109,
+        "accuracy": 0.6301730055954167,
+        "current_cooldown": 0.2118952120475246,
+        "game_time": 26.1227126121521
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 32,
+        "score": 67,
+        "clicks": 38,
+        "hits": 31,
+        "precision": 0.8157894736842105,
+        "accuracy": 0.6298893142157257,
+        "current_cooldown": 0.728895212047525,
+        "game_time": 27.13871693611145
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 33,
+        "score": 71,
+        "clicks": 39,
+        "hits": 32,
+        "precision": 0.8205128205128205,
+        "accuracy": 0.6330469018933593,
+        "current_cooldown": 0.48089521204752483,
+        "game_time": 28.15370798110962
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 34,
+        "score": 79,
+        "clicks": 41,
+        "hits": 34,
+        "precision": 0.8292682926829268,
+        "accuracy": 0.6281556675802695,
+        "current_cooldown": 0.2308952120475246,
+        "game_time": 29.1693058013916
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 35,
+        "score": 83,
+        "clicks": 42,
+        "hits": 35,
+        "precision": 0.8333333333333334,
+        "accuracy": 0.6278438289835714,
+        "current_cooldown": -0.007104787952475475,
+        "game_time": 30.17930555343628
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 37,
+        "score": 91,
+        "clicks": 44,
+        "hits": 37,
+        "precision": 0.8409090909090909,
+        "accuracy": 0.6216801206987612,
+        "current_cooldown": 0.5228952120475249,
+        "game_time": 31.189305782318115
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 38,
+        "score": 95,
+        "clicks": 45,
+        "hits": 38,
+        "precision": 0.8444444444444444,
+        "accuracy": 0.6178268251889254,
+        "current_cooldown": 0.27989521204752466,
+        "game_time": 32.20230412483215
+    },
+    {
+        "level": 4,
+        "lives": 3,
+        "total_targets_spawned": 39,
+        "score": 99,
+        "clicks": 46,
+        "hits": 39,
+        "precision": 0.8478260869565217,
+        "accuracy": 0.6146958668095086,
+        "current_cooldown": 0.037895212047524524,
+        "game_time": 33.21730375289917
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 41,
+        "score": 109,
+        "clicks": 48,
+        "hits": 41,
+        "precision": 0.8541666666666666,
+        "accuracy": 0.6110284119873557,
+        "current_cooldown": 0.47098617948366805,
+        "game_time": 34.232309103012085
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 42,
+        "score": 114,
+        "clicks": 49,
+        "hits": 42,
+        "precision": 0.8571428571428571,
+        "accuracy": 0.6117357055296233,
+        "current_cooldown": 0.1949861794836678,
+        "game_time": 35.235312700271606
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 44,
+        "score": 119,
+        "clicks": 50,
+        "hits": 43,
+        "precision": 0.86,
+        "accuracy": 0.6084796938699738,
+        "current_cooldown": 0.6319861794836682,
+        "game_time": 36.250306129455566
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 45,
+        "score": 129,
+        "clicks": 52,
+        "hits": 45,
+        "precision": 0.8653846153846154,
+        "accuracy": 0.6054092570190199,
+        "current_cooldown": 0.34198617948366794,
+        "game_time": 37.26230239868164
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 46,
+        "score": 134,
+        "clicks": 53,
+        "hits": 46,
+        "precision": 0.8679245283018868,
+        "accuracy": 0.6021710487442309,
+        "current_cooldown": 0.05298617948366775,
+        "game_time": 38.274303913116455
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 48,
+        "score": 139,
+        "clicks": 55,
+        "hits": 47,
+        "precision": 0.8545454545454545,
+        "accuracy": 0.6022751227131266,
+        "current_cooldown": 0.48698617948366807,
+        "game_time": 39.28731083869934
+    },
+    {
+        "level": 5,
+        "lives": 3,
+        "total_targets_spawned": 49,
+        "score": 149,
+        "clicks": 57,
+        "hits": 49,
+        "precision": 0.8596491228070176,
+        "accuracy": 0.5997037579693929,
+        "current_cooldown": 0.1989861794836678,
+        "game_time": 40.29931020736694
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 51,
+        "score": 155,
+        "clicks": 58,
+        "hits": 50,
+        "precision": 0.8620689655172413,
+        "accuracy": 0.5990639537169034,
+        "current_cooldown": 0.5373422238165122,
+        "game_time": 41.311302185058594
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 52,
+        "score": 167,
+        "clicks": 61,
+        "hits": 52,
+        "precision": 0.8524590163934426,
+        "accuracy": 0.5953279732171413,
+        "current_cooldown": 0.2003422238165119,
+        "game_time": 42.32327485084534
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 54,
+        "score": 173,
+        "clicks": 62,
+        "hits": 53,
+        "precision": 0.8548387096774194,
+        "accuracy": 0.5926898450510171,
+        "current_cooldown": 0.5383422238165122,
+        "game_time": 43.33629870414734
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 55,
+        "score": 185,
+        "clicks": 64,
+        "hits": 55,
+        "precision": 0.859375,
+        "accuracy": 0.5888657861866465,
+        "current_cooldown": 0.2013422238165119,
+        "game_time": 44.34629797935486
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 57,
+        "score": 191,
+        "clicks": 65,
+        "hits": 56,
+        "precision": 0.8615384615384616,
+        "accuracy": 0.5888184674835951,
+        "current_cooldown": 0.5373422238165122,
+        "game_time": 45.35826277732849
+    },
+    {
+        "level": 6,
+        "lives": 3,
+        "total_targets_spawned": 58,
+        "score": 203,
+        "clicks": 67,
+        "hits": 58,
+        "precision": 0.8656716417910447,
+        "accuracy": 0.5804203923799844,
+        "current_cooldown": 0.2013422238165119,
+        "game_time": 46.372297525405884
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 60,
+        "score": 209,
+        "clicks": 68,
+        "hits": 59,
+        "precision": 0.8676470588235294,
+        "accuracy": 0.5781047366681273,
+        "current_cooldown": 0.5077497418845909,
+        "game_time": 47.375298738479614
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 61,
+        "score": 223,
+        "clicks": 71,
+        "hits": 61,
+        "precision": 0.8591549295774648,
+        "accuracy": 0.5765626212922409,
+        "current_cooldown": 0.12474974188459055,
+        "game_time": 48.39129376411438
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 63,
+        "score": 230,
+        "clicks": 72,
+        "hits": 62,
+        "precision": 0.8611111111111112,
+        "accuracy": 0.5761000053470758,
+        "current_cooldown": 0.36374974188459075,
+        "game_time": 49.407301902770996
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 65,
+        "score": 244,
+        "clicks": 74,
+        "hits": 64,
+        "precision": 0.8648648648648649,
+        "accuracy": 0.5725296198643101,
+        "current_cooldown": 0.606749741884591,
+        "game_time": 50.418296813964844
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 66,
+        "score": 258,
+        "clicks": 76,
+        "hits": 66,
+        "precision": 0.868421052631579,
+        "accuracy": 0.5713155821271413,
+        "current_cooldown": 0.22274974188459062,
+        "game_time": 51.428301095962524
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 68,
+        "score": 265,
+        "clicks": 78,
+        "hits": 67,
+        "precision": 0.8589743589743589,
+        "accuracy": 0.5685151287666531,
+        "current_cooldown": 0.46074974188459084,
+        "game_time": 52.441285371780396
+    },
+    {
+        "level": 7,
+        "lives": 3,
+        "total_targets_spawned": 69,
+        "score": 279,
+        "clicks": 80,
+        "hits": 69,
+        "precision": 0.8625,
+        "accuracy": 0.5668526043241537,
+        "current_cooldown": 0.07374974188459055,
+        "game_time": 53.45628571510315
+    },
+    {
+        "level": 8,
+        "lives": 3,
+        "total_targets_spawned": 71,
+        "score": 295,
+        "clicks": 82,
+        "hits": 71,
+        "precision": 0.8658536585365854,
+        "accuracy": 0.5614050745977127,
+        "current_cooldown": 0.2580091045650379,
+        "game_time": 54.4562873840332
+    },
+    {
+        "level": 8,
+        "lives": 3,
+        "total_targets_spawned": 73,
+        "score": 303,
+        "clicks": 84,
+        "hits": 72,
+        "precision": 0.8571428571428571,
+        "accuracy": 0.5580895766036581,
+        "current_cooldown": 0.43700910456503805,
+        "game_time": 55.46528172492981
+    },
+    {
+        "level": 8,
+        "lives": 3,
+        "total_targets_spawned": 74,
+        "score": 319,
+        "clicks": 86,
+        "hits": 74,
+        "precision": 0.8604651162790697,
+        "accuracy": 0.555765369256307,
+        "current_cooldown": 0.02000910456503778,
+        "game_time": 56.47627830505371
+    },
+    {
+        "level": 8,
+        "lives": 3,
+        "total_targets_spawned": 76,
+        "score": 335,
+        "clicks": 88,
+        "hits": 76,
+        "precision": 0.8636363636363636,
+        "accuracy": 0.5525132226464395,
+        "current_cooldown": 0.19700910456503784,
+        "game_time": 57.48926115036011
+    },
+    {
+        "level": 8,
+        "lives": 3,
+        "total_targets_spawned": 78,
+        "score": 343,
+        "clicks": 89,
+        "hits": 77,
+        "precision": 0.8651685393258427,
+        "accuracy": 0.5501701146218322,
+        "current_cooldown": 0.370009104565038,
+        "game_time": 58.50427460670471
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 80,
+        "score": 359,
+        "clicks": 91,
+        "hits": 79,
+        "precision": 0.8681318681318682,
+        "accuracy": 0.548370049802834,
+        "current_cooldown": 0.5119337425841478,
+        "game_time": 59.51628351211548
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 81,
+        "score": 377,
+        "clicks": 94,
+        "hits": 81,
+        "precision": 0.8617021276595744,
+        "accuracy": 0.5420216862993641,
+        "current_cooldown": 0.06093374258414748,
+        "game_time": 60.51727890968323
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 83,
+        "score": 395,
+        "clicks": 96,
+        "hits": 83,
+        "precision": 0.8645833333333334,
+        "accuracy": 0.535488388075715,
+        "current_cooldown": 0.1549337425841475,
+        "game_time": 61.519266843795776
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 85,
+        "score": 404,
+        "clicks": 97,
+        "hits": 84,
+        "precision": 0.865979381443299,
+        "accuracy": 0.5307743778361415,
+        "current_cooldown": 0.23893374258414757,
+        "game_time": 62.53227090835571
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 87,
+        "score": 422,
+        "clicks": 99,
+        "hits": 86,
+        "precision": 0.8686868686868687,
+        "accuracy": 0.5287751983220764,
+        "current_cooldown": 0.31893374258414764,
+        "game_time": 63.546258211135864
+    },
+    {
+        "level": 9,
+        "lives": 3,
+        "total_targets_spawned": 89,
+        "score": 440,
+        "clicks": 101,
+        "hits": 88,
+        "precision": 0.8712871287128713,
+        "accuracy": 0.5249919459801252,
+        "current_cooldown": 0.3969337425841477,
+        "game_time": 64.55925703048706
+    },
+    {
+        "level": 10,
+        "lives": 3,
+        "total_targets_spawned": 91,
+        "score": 459,
+        "clicks": 103,
+        "hits": 90,
+        "precision": 0.8737864077669902,
+        "accuracy": 0.5169436186843708,
+        "current_cooldown": 0.4283492921347175,
+        "game_time": 65.55926084518433
+    },
+    {
+        "level": 10,
+        "lives": 3,
+        "total_targets_spawned": 93,
+        "score": 479,
+        "clicks": 105,
+        "hits": 92,
+        "precision": 0.8761904761904762,
+        "accuracy": 0.5100297653182999,
+        "current_cooldown": 0.4433492921347175,
+        "game_time": 66.57626366615295
+    },
+    {
+        "level": 10,
+        "lives": 3,
+        "total_targets_spawned": 95,
+        "score": 499,
+        "clicks": 107,
+        "hits": 94,
+        "precision": 0.8785046728971962,
+        "accuracy": 0.5048661473943226,
+        "current_cooldown": 0.47634929213471755,
+        "game_time": 67.57726311683655
+    },
+    {
+        "level": 10,
+        "lives": 3,
+        "total_targets_spawned": 97,
+        "score": 519,
+        "clicks": 109,
+        "hits": 96,
+        "precision": 0.8807339449541285,
+        "accuracy": 0.5009603206960601,
+        "current_cooldown": 0.49234929213471756,
+        "game_time": 68.59025478363037
+    },
+    {
+        "level": 10,
+        "lives": 3,
+        "total_targets_spawned": 98,
+        "score": 539,
+        "clicks": 111,
+        "hits": 98,
+        "precision": 0.8828828828828829,
+        "accuracy": 0.4973985770358276,
+        "current_cooldown": -0.006650707865282754,
+        "game_time": 69.60325813293457
+    },
+    {
+        "level": 11,
+        "lives": 3,
+        "total_targets_spawned": 101,
+        "score": 560,
+        "clicks": 114,
+        "hits": 100,
+        "precision": 0.8771929824561403,
+        "accuracy": 0.49306636656905284,
+        "current_cooldown": 0.45909279638758643,
+        "game_time": 70.61626648902893
+    },
+    {
+        "level": 11,
+        "lives": 3,
+        "total_targets_spawned": 103,
+        "score": 582,
+        "clicks": 116,
+        "hits": 102,
+        "precision": 0.8793103448275862,
+        "accuracy": 0.4884617140138199,
+        "current_cooldown": 0.4110927963875864,
+        "game_time": 71.62925148010254
+    },
+    {
+        "level": 11,
+        "lives": 3,
+        "total_targets_spawned": 105,
+        "score": 604,
+        "clicks": 118,
+        "hits": 104,
+        "precision": 0.8813559322033898,
+        "accuracy": 0.48224648760330874,
+        "current_cooldown": 0.36309279638758635,
+        "game_time": 72.64425373077393
+    },
+    {
+        "level": 11,
+        "lives": 3,
+        "total_targets_spawned": 107,
+        "score": 626,
+        "clicks": 120,
+        "hits": 106,
+        "precision": 0.8833333333333333,
+        "accuracy": 0.47728294321895787,
+        "current_cooldown": 0.3290927963875863,
+        "game_time": 73.65025854110718
+    },
+    {
+        "level": 11,
+        "lives": 3,
+        "total_targets_spawned": 109,
+        "score": 648,
+        "clicks": 123,
+        "hits": 108,
+        "precision": 0.8780487804878049,
+        "accuracy": 0.47149054438066923,
+        "current_cooldown": 0.2830927963875863,
+        "game_time": 74.66424870491028
+    },
+    {
+        "level": 12,
+        "lives": 3,
+        "total_targets_spawned": 111,
+        "score": 660,
+        "clicks": 127,
+        "hits": 109,
+        "precision": 0.8582677165354331,
+        "accuracy": 0.4685067918366872,
+        "current_cooldown": 0.17201195924073476,
+        "game_time": 75.67724704742432
+    },
+    {
+        "level": 12,
+        "lives": 3,
+        "total_targets_spawned": 113,
+        "score": 708,
+        "clicks": 134,
+        "hits": 113,
+        "precision": 0.8432835820895522,
+        "accuracy": 0.4546759277492138,
+        "current_cooldown": 0.05001195924073472,
+        "game_time": 76.6937837600708
+    },
+    {
+        "level": 12,
+        "lives": 3,
+        "total_targets_spawned": 116,
+        "score": 732,
+        "clicks": 137,
+        "hits": 115,
+        "precision": 0.8394160583941606,
+        "accuracy": 0.4508328175616053,
+        "current_cooldown": 0.41101195924073497,
+        "game_time": 77.69482707977295
+    },
+    {
+        "level": 12,
+        "lives": 3,
+        "total_targets_spawned": 118,
+        "score": 756,
+        "clicks": 139,
+        "hits": 117,
+        "precision": 0.841726618705036,
+        "accuracy": 0.44391576266595006,
+        "current_cooldown": 0.29801195924073487,
+        "game_time": 78.70377898216248
+    },
+    {
+        "level": 13,
+        "lives": 3,
+        "total_targets_spawned": 120,
+        "score": 780,
+        "clicks": 142,
+        "hits": 119,
+        "precision": 0.8380281690140845,
+        "accuracy": 0.4392099423874434,
+        "current_cooldown": 0.18396444788853716,
+        "game_time": 79.70781993865967
+    },
+    {
+        "level": 13,
+        "lives": 3,
+        "total_targets_spawned": 122,
+        "score": 806,
+        "clicks": 147,
+        "hits": 121,
+        "precision": 0.8231292517006803,
+        "accuracy": 0.43470541255984163,
+        "current_cooldown": 0.036964447888537116,
+        "game_time": 80.70981860160828
+    },
+    {
+        "level": 13,
+        "lives": 3,
+        "total_targets_spawned": 125,
+        "score": 806,
+        "clicks": 155,
+        "hits": 121,
+        "precision": 0.7806451612903226,
+        "accuracy": 0.43470541255984163,
+        "current_cooldown": 0.30096444788853727,
+        "game_time": 81.71681499481201
+    },
+    {
+        "level": 13,
+        "lives": 3,
+        "total_targets_spawned": 127,
+        "score": 832,
+        "clicks": 167,
+        "hits": 123,
+        "precision": 0.7365269461077845,
+        "accuracy": 0.4305044480708719,
+        "current_cooldown": 0.11996444788853712,
+        "game_time": 82.7337806224823
+    },
+    {
+        "level": 14,
+        "lives": 2,
+        "total_targets_spawned": 130,
+        "score": 858,
+        "clicks": 178,
+        "hits": 125,
+        "precision": 0.702247191011236,
+        "accuracy": 0.4266238349835359,
+        "current_cooldown": 0.3718172410173246,
+        "game_time": 83.73781991004944
+    },
+    {
+        "level": 14,
+        "lives": 1,
+        "total_targets_spawned": 132,
+        "score": 872,
+        "clicks": 188,
+        "hits": 126,
+        "precision": 0.6702127659574468,
+        "accuracy": 0.42386877067299555,
+        "current_cooldown": 0.15481724101732441,
+        "game_time": 84.7418122291565
+    }
+]
