@@ -1,5 +1,6 @@
 import math
 import random
+import time
 
 import pygame
 
@@ -16,7 +17,8 @@ class PlayingState(state.GameState):
     
     def process_event(self, event: pygame.event.Event):
         global _score
-        global _targets
+        global _alive_targets
+        global _dead_targets
         global _clicks
         global _hits
         global _hits_accuracy
@@ -28,7 +30,7 @@ class PlayingState(state.GameState):
                 
                 _clicks += 1
                 _precision = _hits / _clicks
-                for target in _targets:
+                for target in _alive_targets:
                     click_position = (
                         event.pos[0] - const.GAME_AREA_RECT.left,
                         event.pos[1] - const.GAME_AREA_RECT.top
@@ -39,7 +41,9 @@ class PlayingState(state.GameState):
                     distance = math.dist(click_position, target_center)
                     
                     if distance <= target_radius:
-                        _targets.remove(target)
+                        target.disable(True, click_position)
+                        _alive_targets.remove(target)
+                        _dead_targets.append(target)
                         _score += 1 * _level
                         _hits += 1
                         
@@ -58,9 +62,17 @@ class PlayingState(state.GameState):
                 increase_level()
         
     def update(self, delta_time_seconds: float):
-        global _targets
+        global _alive_targets
+        global _dead_targets
         global _current_cooldown
         global _lives
+        global _started_run
+        global _game_time
+        global _start_time
+        
+        if not _started_run:
+            _started_run = True
+            _start_time = time.time()
         
         _current_cooldown -= delta_time_seconds / const.TARGET_FPS
         
@@ -68,11 +80,14 @@ class PlayingState(state.GameState):
             spawn_target()
             _current_cooldown = _spawn_cooldown * get_cooldown_multiplier()
         
-        for target in _targets:
+        for target in _alive_targets:
             if not self.game_surface_rect.collidepoint(target.position.x, target.position.y - target.radius):
-                _targets.remove(target)
+                target.disable(False)
+                _alive_targets.remove(target)
+                _dead_targets.append(target)
                 _lives -= 1
                 if _lives <= 0:
+                    _game_time = time.time() - _start_time
                     core.push_state('gameover')
             
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
@@ -83,7 +98,7 @@ class PlayingState(state.GameState):
         surface.fill("#181818")
         self.game_surface.fill("#232323")
         
-        for target in _targets:
+        for target in _alive_targets:
             pygame.draw.circle(self.game_surface, target.color, target.position, target.radius)
         
         surface.blit(self.game_surface, const.GAME_AREA_RECT.topleft)
@@ -102,9 +117,30 @@ class Target:
     def __init__(self, radius: int, position: pygame.Vector2):
         self.radius: int = radius
         self.position: pygame.Vector2 = position
+        self.kill_hit_position: tuple[int, int] = (0, 0)
+        self.killed: bool = False
         
         self.color: str = "#c42323"
         self.speed: pygame.Vector2 = pygame.Vector2(0, 1)
+        self.time_born = time.time()
+        self.time_alive = 0
+    
+    def disable(self, killed: bool, click: tuple[int, int]=(0, 0)):
+        if killed:
+            assert math.dist(click, self.position) <= self.radius
+        
+            self.killed = True
+            self.kill_hit_position = click
+        self.time_alive = time.time() - self.time_born
+    
+    def to_dict(self) -> dict:
+        return {
+            'final_position': (int(self.position.x), int(self.position.y)),
+            'time_alive': self.time_alive,
+            'killed': self.killed,
+            'kill_hit_position': self.kill_hit_position,
+            'hit_accuracy': 0 if not self.killed else 1 - math.dist(self.position, self.kill_hit_position) / self.radius
+        }
 
 
 def get_speed_multiplier() -> float:
@@ -127,7 +163,8 @@ def decrease_level(amount: int = 1):
     update_gui()
 
 def restart_game():
-    global _targets
+    global _alive_targets
+    global _dead_targets
     global _level
     global _lives
     global _total_targets_spawned
@@ -138,8 +175,10 @@ def restart_game():
     global _hits_accuracy
     global _precision
     global _accuracy
+    global _started_run
     
-    _targets = []
+    _alive_targets = []
+    _dead_targets = []
     _level = 1
     _lives = 3
     _total_targets_spawned= 0
@@ -150,11 +189,12 @@ def restart_game():
     _hits_accuracy = []
     _precision = 0
     _accuracy = 0
+    _started_run = False
     
     update_gui()
 
 def spawn_target():
-    global _targets
+    global _alive_targets
     global _total_targets_spawned
     
     position = (
@@ -165,7 +205,7 @@ def spawn_target():
         _radius
     )
     
-    _targets.append(Target(_radius, pygame.Vector2(position)))
+    _alive_targets.append(Target(_radius, pygame.Vector2(position)))
     _total_targets_spawned += 1
     
     if _total_targets_spawned % _targets_per_level == 0:
@@ -188,10 +228,27 @@ def update_gui():
     _precision_text = font.render(f"Precisão: {round(_precision * 100, 2)}%", True, "#eeeeee")
     _accuracy_text = font.render(f"Exatidão: {round(_accuracy * 100, 2)}%", True, "#eeeeee")
 
-def get_score():
-    return _score
+def get_game_data():
+    return {
+        'dead_targets': [target.to_dict() for target in _dead_targets],
 
-_targets: list[Target] = []
+        'level': _level,
+        'lives': _lives,
+        'radius': _radius,
+        'total_targets_spawned': _total_targets_spawned,
+        'targets_per_level': _targets_per_level,
+        'score': _score,
+        'clicks': _clicks,
+        'hits': _hits,
+        'precision': _precision,
+        'accuracy': _accuracy,
+        'spawn_cooldown': _spawn_cooldown,
+        'current_cooldown': _current_cooldown,
+        'game_time': _game_time
+    }
+
+_dead_targets: list[Target] = []
+_alive_targets: list[Target] = []
 
 _level: int = 1
 _lives: int = 3
@@ -208,6 +265,10 @@ _accuracy: int = 0
 
 _spawn_cooldown: float = 1
 _current_cooldown: float = 0
+
+_started_run: bool = False
+_game_time: float = 0
+_start_time: float = 0
 
 
 font = pygame.font.Font(None, 25)
