@@ -10,6 +10,10 @@ from . import state
 
 
 class PlayingState(state.GameState):
+    def __init__(self):
+        self.game_surface: pygame.Surface = pygame.Surface(const.GAME_AREA_RECT.size)
+        self.game_surface_rect: pygame.Rect = self.game_surface.get_rect()
+    
     def process_event(self, event: pygame.event.Event):
         global _score
         global _targets
@@ -17,7 +21,10 @@ class PlayingState(state.GameState):
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
                 for target in _targets:
-                    click_position = event.pos
+                    click_position = (
+                        event.pos[0] - const.GAME_AREA_RECT.left,
+                        event.pos[1] - const.GAME_AREA_RECT.top
+                    )
                     target_center = target.position
                     target_radius = target.radius
                     
@@ -48,7 +55,7 @@ class PlayingState(state.GameState):
             _current_cooldown = _spawn_cooldown * get_cooldown_multiplier()
         
         for target in _targets:
-            if target.position.y - target.radius > const.WINDOW_SIZE[1]:
+            if not self.game_surface_rect.collidepoint(target.position.x, target.position.y - target.radius):
                 _targets.remove(target)
                 _lives -= 1
                 if _lives <= 0:
@@ -58,9 +65,13 @@ class PlayingState(state.GameState):
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
 
     def render(self, surface: pygame.Surface):
-        surface.fill("#232323")
+        surface.fill("#181818")
+        self.game_surface.fill("#232323")
+        
         for target in _targets:
-            pygame.draw.circle(surface, target.color, target.position, target.radius)
+            pygame.draw.circle(self.game_surface, target.color, target.position, target.radius)
+        
+        surface.blit(self.game_surface, const.GAME_AREA_RECT.topleft)
         
         texts = [_level_text, _lives_text, _score_text]
         height = 5
@@ -117,7 +128,14 @@ def spawn_target():
     global _targets
     global _total_targets_spawned
     
-    position = (random.randint(_radius, const.WINDOW_SIZE[0] - _radius), _radius)
+    position = (
+        random.randint(
+            _radius,
+            const.GAME_AREA_RECT.width - _radius
+        ), 
+        _radius
+    )
+    
     _targets.append(Target(_radius, pygame.Vector2(position)))
     _total_targets_spawned += 1
     

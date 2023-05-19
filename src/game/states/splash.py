@@ -1,5 +1,6 @@
 import pygame
 
+from .. import const
 from .. import core
 from . import state
 
@@ -15,27 +16,17 @@ class SplashState(state.GameState):
     
     def render(self, surface: pygame.Surface):
         surface.fill("#181818")
+        surface.fill("#232323", const.GAME_AREA_RECT)
         
-        display = pygame.display.get_surface()
-        surface.fill(
-            "#232323", 
-            pygame.Rect(
-                20, 
-                20, 
-                display.get_width() - 20 * 2,
-                display.get_height() - 20 * 2
-            )
-        )
-        
-        texts = [_gameover_text, _continue_text]
+        texts = [_logo_text, _press_to_play_text]
         height = 50
         for text in texts:
-            surface.blit(text, (surface.get_width() / 2 - text.get_width() / 2, height))
+            surface.blit(text, (const.GAME_AREA_RECT.centerx - text.get_width() / 2, height))
             height += 5 + text.get_height()
 
 
 font_big = pygame.font.Font(None, 50)
 font_normal = pygame.font.Font(None, 25)
 
-_gameover_text = font_big.render("BallFall", True, "#eeeeee")
-_continue_text = font_normal.render("Pressione \"R\" para jogar", True, "#eeeeee")
+_logo_text = font_big.render("BallFall", True, "#eeeeee")
+_press_to_play_text = font_normal.render("Pressione \"R\" para jogar", True, "#eeeeee")

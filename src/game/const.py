@@ -1,3 +1,14 @@
+import pygame
+
 WINDOW_SIZE: tuple[int, int] = (800, 600)
 TARGET_FPS: int = 60
 OVER: bool = False
+
+SIDEBAR_WIDTH: int = 200
+GAME_AREA_MARGIN: int = 20
+GAME_AREA_RECT: pygame.Rect = pygame.Rect(
+    SIDEBAR_WIDTH + GAME_AREA_MARGIN,
+    GAME_AREA_MARGIN,
+    WINDOW_SIZE[0] - SIDEBAR_WIDTH - 2 * GAME_AREA_MARGIN,
+    WINDOW_SIZE[1] - 2 * GAME_AREA_MARGIN
+)

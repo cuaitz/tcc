@@ -3,9 +3,10 @@ import json
 import pygame
 import keyboard
 
+from .. import const
+from .. import core
 from . import state
 from . import playing
-from .. import core
 
 
 class GameOverState(state.GameState):
@@ -24,15 +25,16 @@ class GameOverState(state.GameState):
 
     def update(self, delta_time_seconds: float):
         update_gui()
-        keyboard.press_and_release('r')
+        #keyboard.press_and_release('r')
     
     def render(self, surface: pygame.Surface):
-        surface.fill("#232323")
+        surface.fill("#181818")
+        surface.fill("#232323", const.GAME_AREA_RECT)
         
         texts = [_gameover_text, _level_text, _score_text, _continue_text]
-        height = 5
+        height = 50
         for text in texts:
-            surface.blit(text, (5, height))
+            surface.blit(text, (const.GAME_AREA_RECT.centerx - text.get_width() / 2, height))
             height += 5 + text.get_height()
 
 def update_gui():
