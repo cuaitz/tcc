@@ -17,9 +17,17 @@ class PlayingState(state.GameState):
     def process_event(self, event: pygame.event.Event):
         global _score
         global _targets
+        global _clicks
+        global _hits
+        global _hits_accuracy
+        global _precision
+        global _accuracy
         
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
+                
+                _clicks += 1
+                _precision = _hits / _clicks
                 for target in _targets:
                     click_position = (
                         event.pos[0] - const.GAME_AREA_RECT.left,
@@ -33,7 +41,13 @@ class PlayingState(state.GameState):
                     if distance <= target_radius:
                         _targets.remove(target)
                         _score += 1 * _level
-                        update_gui()
+                        _hits += 1
+                        
+                        normalized_distance = 1 - distance / _radius
+                        _hits_accuracy.append(normalized_distance)
+                        
+                        _accuracy = sum(_hits_accuracy) / len(_hits_accuracy)
+                        _precision = _hits / _clicks
 
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
@@ -60,9 +74,10 @@ class PlayingState(state.GameState):
                 _lives -= 1
                 if _lives <= 0:
                     core.push_state('gameover')
-                update_gui()
             
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
+        
+        update_gui()
 
     def render(self, surface: pygame.Surface):
         surface.fill("#181818")
@@ -73,11 +88,14 @@ class PlayingState(state.GameState):
         
         surface.blit(self.game_surface, const.GAME_AREA_RECT.topleft)
         
-        texts = [_level_text, _lives_text, _score_text]
+        texts = [_level_text, _lives_text, _score_text, _clicks_text, _hits_text, _precision_text, _accuracy_text]
         height = 5
         for text in texts:
             surface.blit(text, (5, height))
             height += 5 + text.get_height()
+            
+            if text in [_score_text, _hits_text]:
+                height += 10
 
 
 class Target:
@@ -115,6 +133,11 @@ def restart_game():
     global _total_targets_spawned
     global _current_cooldown
     global _score
+    global _clicks
+    global _hits
+    global _hits_accuracy
+    global _precision
+    global _accuracy
     
     _targets = []
     _level = 1
@@ -122,6 +145,12 @@ def restart_game():
     _total_targets_spawned= 0
     _current_cooldown = 0
     _score = 0
+    _clicks = 0
+    _hits = 0
+    _hits_accuracy = []
+    _precision = 0
+    _accuracy = 0
+    
     update_gui()
 
 def spawn_target():
@@ -146,10 +175,18 @@ def update_gui():
     global _level_text
     global _lives_text
     global _score_text
+    global _precision_text
+    global _clicks_text
+    global _hits_text
+    global _accuracy_text
     
     _level_text = font.render(f"Nível: {_level}", True, "#eeeeee")
     _lives_text = font.render(f"Vidas: {_lives}", True, "#eeeeee")
     _score_text = font.render(f"Pontos: {_score}", True, "#eeeeee")
+    _clicks_text = font.render(f"Cliques: {_clicks}", True, "#eeeeee")
+    _hits_text = font.render(f"Acertos: {_hits}", True, "#eeeeee")
+    _precision_text = font.render(f"Precisão: {round(_precision * 100, 2)}%", True, "#eeeeee")
+    _accuracy_text = font.render(f"Exatidão: {round(_accuracy * 100, 2)}%", True, "#eeeeee")
 
 def get_score():
     return _score
@@ -163,6 +200,12 @@ _total_targets_spawned: int = 0
 _targets_per_level: int = 10
 _score: int = 0
 
+_clicks: int = 0
+_hits: int = 0
+_hits_accuracy: list[float] = []
+_precision: int = 0
+_accuracy: int = 0
+
 _spawn_cooldown: float = 1
 _current_cooldown: float = 0
 
@@ -172,4 +215,8 @@ font = pygame.font.Font(None, 25)
 _level_text: pygame.Surface = font.render("Nível: x", True, "#eeeeee")
 _lives_text: pygame.Surface = font.render("Vidas: x", True, "#eeeeee")
 _score_text: pygame.Surface = font.render("Pontos: x", True, "#eeeeee")
+_clicks_text: pygame.Surface = font.render("Cliques: x", True, "#eeeeee")
+_hits_text: pygame.Surface = font.render("Acertos: x", True, "#eeeeee")
+_precision_text: pygame.Surface = font.render("Precisão: x", True, "#eeeeee")
+_accuracy_text: pygame.Surface = font.render("Exatidão: x", True, "#eeeeee")
 update_gui()
