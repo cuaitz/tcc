@@ -16,7 +16,7 @@ class GameOverState(state.GameState):
                 core.pop_state()
                 
                 with open('data.json', 'w+') as file:
-                    json.dump(playing.get_game_data(), file, indent=4)
+                    json.dump(playing._run_data, file, indent=4)
                     
                 playing.restart_game()
 

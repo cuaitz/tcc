@@ -67,14 +67,18 @@ class PlayingState(state.GameState):
         global _current_cooldown
         global _lives
         global _started_run
-        global _game_time
         global _start_time
+        global _last_data_gather
         
         if not _started_run:
             _started_run = True
             _start_time = time.time()
         
         _current_cooldown -= delta_time_seconds / const.TARGET_FPS
+        
+        if time.time() - _last_data_gather >= 1:
+            _run_data.append(get_game_data())
+            _last_data_gather = time.time()
         
         if _current_cooldown <= 0:
             spawn_target()
@@ -87,7 +91,7 @@ class PlayingState(state.GameState):
                 _dead_targets.append(target)
                 _lives -= 1
                 if _lives <= 0:
-                    _game_time = time.time() - _start_time
+                    _run_data.insert(0, get_game_data(complete=True))
                     core.push_state('gameover')
             
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
@@ -176,6 +180,7 @@ def restart_game():
     global _precision
     global _accuracy
     global _started_run
+    global _run_data
     
     _alive_targets = []
     _dead_targets = []
@@ -190,6 +195,7 @@ def restart_game():
     _precision = 0
     _accuracy = 0
     _started_run = False
+    _run_data = []
     
     update_gui()
 
@@ -228,24 +234,38 @@ def update_gui():
     _precision_text = font.render(f"Precisão: {round(_precision * 100, 2)}%", True, "#eeeeee")
     _accuracy_text = font.render(f"Exatidão: {round(_accuracy * 100, 2)}%", True, "#eeeeee")
 
-def get_game_data():
-    return {
-        'dead_targets': [target.to_dict() for target in _dead_targets],
+def get_game_data(complete=False):
+    if complete:
+        return {
+            'dead_targets': [target.to_dict() for target in _dead_targets],
 
-        'level': _level,
-        'lives': _lives,
-        'radius': _radius,
-        'total_targets_spawned': _total_targets_spawned,
-        'targets_per_level': _targets_per_level,
-        'score': _score,
-        'clicks': _clicks,
-        'hits': _hits,
-        'precision': _precision,
-        'accuracy': _accuracy,
-        'spawn_cooldown': _spawn_cooldown,
-        'current_cooldown': _current_cooldown,
-        'game_time': _game_time
-    }
+            'level': _level,
+            'lives': _lives,
+            'radius': _radius,
+            'total_targets_spawned': _total_targets_spawned,
+            'targets_per_level': _targets_per_level,
+            'score': _score,
+            'clicks': _clicks,
+            'hits': _hits,
+            'precision': _precision,
+            'accuracy': _accuracy,
+            'spawn_cooldown': _spawn_cooldown,
+            'current_cooldown': _current_cooldown,
+            'game_time': time.time() - _start_time,
+        }
+    else:
+        return {
+            'level': _level,
+            'lives': _lives,
+            'total_targets_spawned': _total_targets_spawned,
+            'score': _score,
+            'clicks': _clicks,
+            'hits': _hits,
+            'precision': _precision,
+            'accuracy': _accuracy,
+            'current_cooldown': _current_cooldown,
+            'game_time': time.time() - _start_time,
+        }
 
 _dead_targets: list[Target] = []
 _alive_targets: list[Target] = []
@@ -267,8 +287,9 @@ _spawn_cooldown: float = 1
 _current_cooldown: float = 0
 
 _started_run: bool = False
-_game_time: float = 0
 _start_time: float = 0
+_last_data_gather: float = 0
+_run_data: list[dict] = []
 
 
 font = pygame.font.Font(None, 25)
