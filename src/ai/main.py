@@ -25,7 +25,12 @@ def click(position: tuple[int, int]) -> None:
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
     time.sleep(.01)
 
-def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999, best_only=False) -> typing.List[None | Rectangle]:
+def find_in_image(
+        needle: np.array,
+        haystack: np.array,
+        threshold: float = .999, 
+        best_only = False) -> typing.List[None | Rectangle]:
+    
     result = cv2.matchTemplate(haystack, needle, cv2.TM_CCOEFF_NORMED)
     
     #  Filtra os resultados menores que o mínimo e inverte a coord X e Y
@@ -36,16 +41,12 @@ def find_in_image(needle: np.array, haystack: np.array, threshold: float = .999,
     output = []
     for x, y in zip(*matches):
         output.append(
-            (
-                result[y][x],
-                Rectangle(
-                    x,
-                    y,
-                    width,
-                    height
-                )
+            (result[y][x], Rectangle(x, y, width, height)
             )
         )
+    
+    if not output:
+        return output
     
     output.sort(key=lambda x: x[0])
     
