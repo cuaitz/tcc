@@ -103,14 +103,15 @@ class PlayingState(state.GameState):
         self.game_surface.fill("#232323")
         
         for target in _alive_targets:
-            pygame.draw.circle(self.game_surface, target.color, target.position, target.radius)
+            self.game_surface.blit(target._texture, (target.position[0] - target.radius, target.position[1] - target.radius))
+            #pygame.draw.circle(self.game_surface, target.color, target.position, target.radius)
         
         surface.blit(self.game_surface, const.GAME_AREA_RECT.topleft)
         
         texts = [_level_text, _lives_text, _score_text, _clicks_text, _hits_text, _precision_text, _accuracy_text]
-        height = 5
+        height = 30
         for text in texts:
-            surface.blit(text, (5, height))
+            surface.blit(text, (10, height))
             height += 5 + text.get_height()
             
             if text in [_score_text, _hits_text]:
@@ -118,13 +119,14 @@ class PlayingState(state.GameState):
 
 
 class Target:
+    _texture: pygame.Surface = pygame.image.load("game\\assets\\target.png")
+    
     def __init__(self, radius: int, position: pygame.Vector2):
         self.radius: int = radius
         self.position: pygame.Vector2 = position
         self.kill_hit_position: tuple[int, int] = (0, 0)
         self.killed: bool = False
         
-        self.color: str = "#c42323"
         self.speed: pygame.Vector2 = pygame.Vector2(0, 1)
         self.time_born = time.time()
         self.time_alive = 0
