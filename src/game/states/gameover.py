@@ -15,24 +15,12 @@ class GameOverState(state.GameState):
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r:
                 core.pop_state()
-                
-                uid = 0
-                filename = f"data\\base\\data{uid}.json"
-                
-                while os.path.exists(filename):
-                    uid += 1
-                    filename = f"data\\base\\data{uid}.json"
-                    
-                    assert uid < 10  # Crasha dps da 10th partida
-                
-                with open(filename, 'w+') as file:
-                    json.dump(playing._run_data, file, indent=4)
-                    
+                #collect_data()
                 playing.restart_game()
 
     def update(self, delta_time_seconds: float):
         update_gui()
-        keyboard.press_and_release('r')
+        #keyboard.press_and_release('r')
     
     def render(self, surface: pygame.Surface):
         surface.fill("#181818")
@@ -51,6 +39,19 @@ def update_gui():
     _level_text = font_normal.render(f"Nível: {playing._level}", True, "#eeeeee")
     _score_text = font_normal.render(f"Pontuação: {playing._score}", True, "#eeeeee")
 
+def collect_data():
+    uid = 0
+    
+    filename = f"data\\base\\data{uid}.json"
+    
+    while os.path.exists(filename):
+        uid += 1
+        filename = f"data\\base\\data{uid}.json"
+        
+        assert uid < 10  # Crasha dps da 10th partida
+    
+    with open(filename, 'w+') as file:
+        json.dump(playing._run_data, file, indent=4)
 
 font_big = pygame.font.Font(None, 50)
 font_normal = pygame.font.Font(None, 25)
