@@ -68,6 +68,7 @@ class PlayingState(state.GameState):
         global _lives
         global _started_run
         global _start_time
+        global _end_time
         global _last_data_gather
         
         if not _started_run:
@@ -92,6 +93,7 @@ class PlayingState(state.GameState):
                 _lives -= 1
                 if _lives <= 0:
                     _run_data.insert(0, get_game_data(complete=True))
+                    _end_time = time.time()
                     core.push_state('gameover')
             
             target.position += target.speed * delta_time_seconds * get_speed_multiplier()
@@ -183,6 +185,8 @@ def restart_game():
     global _accuracy
     global _started_run
     global _run_data
+    global _end_time
+    global _start_time
     
     _alive_targets = []
     _dead_targets = []
@@ -198,6 +202,8 @@ def restart_game():
     _accuracy = 0
     _started_run = False
     _run_data = []
+    _end_time = 0
+    _start_time = 0
     
     update_gui()
 
@@ -290,6 +296,7 @@ _current_cooldown: float = 0
 
 _started_run: bool = False
 _start_time: float = 0
+_end_time: float = 0
 _last_data_gather: float = 0
 _run_data: list[dict] = []
 
