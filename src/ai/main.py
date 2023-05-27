@@ -35,7 +35,7 @@ def take_screenshot(area: tuple[int, int, int, int]) -> np.array:
 def find_in_image(
     template: np.array,
     area: np.array,
-    threshold: float = .999) -> list[float, Rectangle]:
+    threshold: float = .999) -> list[tuple[float, Rectangle]]:
     
     #  Faz a busca do template na imagem
     result = cv2.matchTemplate(area, template, cv2.TM_CCOEFF_NORMED)
@@ -66,19 +66,21 @@ def find_window() -> None:
     global _window_rect
     screenshot = take_screenshot(_screenshoter.monitors[1])
     
+    topleft_corner = find_in_image(_topleft_corner_image, screenshot)
+    bottomright_corner = find_in_image(_bottomright_corner_image, screenshot)
     
-    top_left_corner = find_in_image(_top_left_corner_image, screenshot)
-    bottom_right_corner = find_in_image(_bottom_right_corner_image, screenshot)
-    
-    if top_left_corner and bottom_right_corner:
-        top_left_rect = top_left_corner[0][1]
-        bottom_right_rect = bottom_right_corner[0][1]
+    if topleft_corner and bottomright_corner:
+        topleft_rect = topleft_corner[0][1]
+        bottomright_rect = bottomright_corner[0][1]
+        
+        left, top = topleft_rect.topleft
+        right, bottom = bottomright_rect.bottomright
         
         _window_rect = Rectangle(
-            top_left_rect.left,
-            top_left_rect.top,
-            bottom_right_rect.right - top_left_rect.left,
-            bottom_right_rect.bottom - top_left_rect.top
+            left,
+            top,
+            right - left,
+            bottom - top
         )
         
         #  Coloca o mouse em cada ponta para confirmar que a janela foi encontrada corretamente
@@ -149,8 +151,8 @@ def get_current_state() -> None | typing.Callable:
 __states = {}
 __state_stack = []
 
-_top_left_corner_image: np.array = cv2.imread("img/top_left.png")
-_bottom_right_corner_image: np.array = cv2.imread("img/bottom_right.png")
+_topleft_corner_image: np.array = cv2.imread("img/top_left.png")
+_bottomright_corner_image: np.array = cv2.imread("img/bottom_right.png")
 _target_image: np.array = cv2.imread("img/target.png")
 
 _window_rect: Rectangle = None
